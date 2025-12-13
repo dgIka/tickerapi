@@ -1,0 +1,16 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  ticker:
+    type: string
+    example: AAPL
+  data:
+    type: array
+    items:
+      $ref: "../openapi.yml#/components/schemas/TickerDay"
+required:
+  - id
+  - ticker
+  - data

@@ -1,0 +1,20 @@
+post:
+  summary: Register new user
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../openapi.yml#/components/schemas/UserRegisterRequest"
+
+  responses:
+    "201":
+      description: User created
+    "409":
+      description: User already exists
+    "400":
+      description: Validation failed
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yml#/components/schemas/ValidationError"

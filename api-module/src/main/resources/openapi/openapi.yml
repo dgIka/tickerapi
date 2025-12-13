@@ -1,0 +1,42 @@
+openapi: 3.0.0
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+info:
+  title: Ticker API
+  version: 1.0.0
+tags:
+  - name: admins
+    description: Secured Admin-only calls
+  - name: developers
+    description: Operations available to regular developers
+paths:
+  /api/user/register:
+    $ref:  "paths/user-register.yml"
+  /api/user/login:
+    $ref:  "paths/user-login.yml"
+  /api/user/saved:
+    $ref:  "paths/user-saved.yml"
+  /api/user/save:
+    $ref:  "paths/user-save.yml"
+components:
+  schemas:
+    UserRegisterRequest:
+      $ref: "schemas/UserRegisterRequest.yml"
+    UserLoginRequest:
+      $ref: "schemas/UserLoginRequest.yml"
+    ValidationError:
+      $ref: "responses/ValidationError.yml"
+    TickerDay:
+      $ref: "schemas/TickerDay.yml"
+    UserSavedResponse:
+      $ref: "schemas/UserSavedResponse.yml"
+    UserSaveRequest:
+      $ref: "schemas/UserSaveRequest.yml"
+    UserSaveResponse:
+      $ref: "schemas/UserSaveResponse.yml"
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

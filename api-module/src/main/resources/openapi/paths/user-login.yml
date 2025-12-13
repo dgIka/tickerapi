@@ -1,0 +1,22 @@
+post:
+  summary: User login
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../openapi.yml#/components/schemas/UserLoginRequest"
+
+  responses:
+    "200":
+      description: Successful login
+    "401":
+      description: Bad login or password
+    "500":
+      description: Server Error
+    "400":
+      description: Validation failed
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yml#/components/schemas/ValidationError"

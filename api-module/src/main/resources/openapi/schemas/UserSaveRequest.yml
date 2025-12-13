@@ -1,0 +1,14 @@
+type: object
+properties:
+  ticker:
+    type: string
+  start:
+    type: string
+    format: date
+  end:
+    type: string
+    format: date
+required:
+  - ticker
+  - start
+  - end

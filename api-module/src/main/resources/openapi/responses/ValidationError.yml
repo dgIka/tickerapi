@@ -1,0 +1,13 @@
+type: object
+description: Validation error response
+properties:
+  code:
+    type: string
+    description: Validation error code
+    example: INVALID_DATE_RANGE
+  message:
+    type: string
+    description: Human-readable error description
+    example: Start date must be before end date
+required:
+  - code

@@ -1,0 +1,23 @@
+type: object
+properties:
+  date:
+    type: string
+    format: date
+  open:
+    type: number
+    format: double
+  close:
+    type: number
+    format: double
+  high:
+    type: number
+    format: double
+  low:
+    type: number
+    format: double
+required:
+  - date
+  - open
+  - close
+  - high
+  - low
