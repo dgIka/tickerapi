@@ -33,8 +33,6 @@ components:
       $ref: "schemas/UserSavedResponse.yml"
     UserSaveRequest:
       $ref: "schemas/UserSaveRequest.yml"
-    UserSaveResponse:
-      $ref: "schemas/UserSaveResponse.yml"
   securitySchemes:
     BearerAuth:
       type: http
