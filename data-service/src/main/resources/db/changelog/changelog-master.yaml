@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/migration/001-create-users.yml
+  - include:
+      file: db/migration/002-create-tickers-and-prices.yml

@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-tickers-table
+      author: you
+      changes:
+        - createTable:
+            tableName: tickers
+            columns:
+              - column: { name: id, type: UUID, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: name, type: varchar(255), constraints: { nullable: false, unique: true } }
+
+  - changeSet:
+      id: create-prices-table
+      author: you
+      changes:
+        - createTable:
+            tableName: prices
+            columns:
+              - column: { name: id, type: UUID, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: ticker_id, type: UUID, constraints: { nullable: false, foreignKeyName: fk_prices_ticker, references: tickers(id) } }
+              - column: { name: date, type: date, constraints: { nullable: false } }
+              - column: { name: open, type: decimal, constraints: { nullable: false } }
+              - column: { name: close, type: decimal, constraints: { nullable: false } }
+              - column: { name: high, type: decimal, constraints: { nullable: false } }
+              - column: { name: low, type: decimal, constraints: { nullable: false } }
+        - addUniqueConstraint:
+            tableName: prices
+            columnNames: ticker_id, date
+            constraintName: uq_ticker_id
+
+  - changeSet:
+      id: create-user-prices-table
+      author: you
+      changes:
+        - createTable:
+            tableName: user_prices
+            columns:
+              - column: { name: user_id, type: UUID, constraints: { nullable: false, foreignKeyName: fk_user_prices_user, references: users(id) } }
+              - column: { name: price_id, type: UUID, constraints: { nullable: false, foreignKeyName: fk_user_prices_price, references: prices(id) } }
+        - addPrimaryKey:
+            tableName: user_prices
+            columnNames: user_id, price_id
+            constraintName: pk_user_prices
