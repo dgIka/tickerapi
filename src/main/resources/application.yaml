@@ -10,3 +10,10 @@ spring:
 
   liquibase:
     change-log: classpath:db/changelog/changelog-master.yaml
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    url: /openapi/openapi.yml
