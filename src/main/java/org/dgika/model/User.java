@@ -30,6 +30,9 @@ public class User {
     @ToString.Exclude
     private UUID id;
 
+    @Column(name = "name")
+    private String name;
+
     @Column(name = "email")
     private String email;
 

@@ -1,7 +1,6 @@
 package org.dgika;
 
 import org.dgika.model.User;
-import org.dgika.service.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
