@@ -3,11 +3,12 @@ package org.dgika.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "ticker")
+@Table(name = "tickers")
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Builder
@@ -15,9 +16,10 @@ import java.util.UUID;
 @Getter
 public class Ticker {
 
-    @OneToMany(mappedBy = "ticker")
+    @OneToMany(mappedBy = "ticker", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
     @ToString.Exclude
-    private List<Price> prices;
+    private List<Price> prices = new ArrayList<>();
 
     @Id
     @Column(name = "id")

@@ -15,6 +15,10 @@ import java.util.UUID;
 @Builder
 @Setter
 @Getter
+@NamedEntityGraph(
+        name = "Price.withTicker",
+        attributeNodes = @NamedAttributeNode("ticker")
+)
 public class Price {
 
     @ManyToMany(mappedBy = "prices")
@@ -44,4 +48,9 @@ public class Price {
 
     @Column(name = "low")
     private Double low;
+
+    public void setTicker(Ticker ticker) {
+        this.ticker = ticker;
+        ticker.getPrices().add(this);
+    }
 }

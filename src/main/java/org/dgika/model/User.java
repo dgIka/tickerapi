@@ -14,6 +14,23 @@ import java.util.UUID;
 @Builder
 @Setter
 @Getter
+@NamedEntityGraphs({
+        @NamedEntityGraph(
+                name = "User.withPrices",
+                attributeNodes = @NamedAttributeNode("prices")
+        ),
+        @NamedEntityGraph(
+                name = "User.withPricesAndTicker",
+                attributeNodes = @NamedAttributeNode(
+                        value = "prices",
+                        subgraph = "pricesWithTicker"
+                ),
+                subgraphs = @NamedSubgraph(
+                        name = "pricesWithTicker",
+                        attributeNodes = @NamedAttributeNode("ticker")
+                )
+        )
+})
 public class User {
 
     @ManyToMany
