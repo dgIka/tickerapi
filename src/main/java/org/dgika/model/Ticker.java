@@ -16,7 +16,7 @@ import java.util.UUID;
 @Getter
 public class Ticker {
 
-    @OneToMany(mappedBy = "ticker", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "ticker", cascade = CascadeType.PERSIST, orphanRemoval = true)
     @Builder.Default
     @ToString.Exclude
     private List<Price> prices = new ArrayList<>();

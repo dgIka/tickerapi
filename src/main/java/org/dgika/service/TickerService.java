@@ -20,4 +20,8 @@ public class TickerService {
     public Ticker save(Ticker ticker) {
         return tickerRepository.save(ticker);
     }
+    @Transactional(readOnly = true)
+    public Ticker findByName(String name) {
+        return tickerRepository.findByName(name);
+    }
 }

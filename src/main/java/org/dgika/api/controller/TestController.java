@@ -48,5 +48,11 @@ public class TestController {
         testService.createAndAddTestData();
     }
 
+    @GetMapping("/user/saved")
+    public void savedUserPrices() {
+        List<Price> tickerTest1 = priceService.findAllByUserIdAndTickerName(UUID.fromString("58d40f27-1373-49e4-b8a7-13957fdac217"), "TickerTest1");
+        tickerTest1.forEach(System.out::println);
+    }
+
 
 }

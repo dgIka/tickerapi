@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
+
 @Service
 public class TestService {
 
@@ -26,21 +27,39 @@ public class TestService {
 
     @Transactional
     public void createAndAddTestData() {
-        Ticker ticker = createTestTicker("TickerTest1");
-        tickerService.save(ticker);
+        Ticker ticker = tickerService.findByName("TickerTest1");
+        if (ticker == null) {
+            ticker = createTestTicker("TickerTest1");
+            tickerService.save(ticker);
+        }
+
 
         Price price1 = createTestPrice(2022, 1, 1);
         price1.setTicker(ticker);
 
-        Price save = priceService.save(price1);
-
         Price price2 = createTestPrice(2022, 1, 2);
         price2.setTicker(ticker);
 
-        Price save1 = priceService.save(price2);
+        Price price3 = createTestPrice(2022, 1, 3);
+        price3.setTicker(ticker);
 
-        List<Price> prices = Arrays.asList(save1, save);
-        userService.saveUserPrices(UUID.fromString("58d40f27-1373-49e4-b8a7-13957fdac217"), prices);
+        List<Price> prices = Arrays.asList(price1, price2, price3);
+
+        prices.forEach(System.out::println);
+
+        List<LocalDate> tickerTest1 = priceService.findExistingDates(UUID.fromString("58d40f27-1373-49e4-b8a7-13957fdac217"), "TickerTest1", LocalDate.of(2022, 1, 1), LocalDate.of(2022, 1, 3));
+        List<Price> resultList = prices.stream().filter(p -> !tickerTest1.contains(p.getDate())).toList();
+        if (resultList.isEmpty()) {
+            System.out.println("No test data found");
+        } else {
+            List<Price> list = resultList.stream().map(priceService::save).toList();
+            userService.saveUserPrices(UUID.fromString("58d40f27-1373-49e4-b8a7-13957fdac217"), list);
+        }
+    }
+
+    public void checkAndPrintAvailiableDatas() {
+        List<LocalDate> tickerTest1 = priceService.findExistingDates(UUID.fromString("58d40f27-1373-49e4-b8a7-13957fdac217"), "TickerTest1", LocalDate.of(2022, 1, 1), LocalDate.of(2022, 1, 3));
+        tickerTest1.forEach(System.out::println);
     }
 
     private Ticker createTestTicker(String name) {

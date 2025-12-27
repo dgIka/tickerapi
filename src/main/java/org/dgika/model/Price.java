@@ -15,6 +15,7 @@ import java.util.UUID;
 @Builder
 @Setter
 @Getter
+@ToString
 @NamedEntityGraph(
         name = "Price.withTicker",
         attributeNodes = @NamedAttributeNode("ticker")
@@ -49,8 +50,5 @@ public class Price {
     @Column(name = "low")
     private Double low;
 
-    public void setTicker(Ticker ticker) {
-        this.ticker = ticker;
-        ticker.getPrices().add(this);
-    }
+
 }
