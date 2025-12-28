@@ -12,4 +12,8 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     @EntityGraph(value = "User.withPricesAndTicker",
             type = EntityGraph.EntityGraphType.FETCH)
     Optional<User> findById(UUID id);
+
+    Optional<User> findByName(String name);
+    boolean existsByName(String name);
+    boolean existsByEmail(String email);
 }

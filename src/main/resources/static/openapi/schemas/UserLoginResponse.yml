@@ -1,0 +1,8 @@
+type: object
+properties:
+  token:
+    type: string
+    description: JWT access token
+    example: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyQGV4YW1wbGUuY29tIn0.abc123
+required:
+  - token

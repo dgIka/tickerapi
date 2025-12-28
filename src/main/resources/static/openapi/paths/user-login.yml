@@ -10,6 +10,10 @@ post:
   responses:
     "200":
       description: Successful login
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yml#/components/schemas/UserLoginResponse"
     "401":
       description: Bad login or password
     "500":
