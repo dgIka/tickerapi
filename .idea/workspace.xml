@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15bb918-1f40-4ffc-8a68-b9a06d438b59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/auth/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/jwt/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/openapi/schemas/UserLoginResponse.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/service/AuthentificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/service/CustomUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/openapi/openapi.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/openapi/openapi.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/openapi/paths/user-login.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/openapi/paths/user-login.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/security/jwt/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/jwt/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/openapi/paths/user-register.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/openapi/paths/user-register.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,9 @@
       <workItem from="1766745791392" duration="13599000" />
       <workItem from="1766832569537" duration="16579000" />
       <workItem from="1766914077626" duration="4963000" />
-      <workItem from="1766945933352" duration="1274000" />
+      <workItem from="1766945933352" duration="2027000" />
+      <workItem from="1767008339944" duration="15797000" />
+      <workItem from="1767085241623" duration="17190000" />
     </task>
     <servers />
   </component>

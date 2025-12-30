@@ -41,18 +41,15 @@ public class JwtService {
                 .compact();
     }
 
-    /** Достаём email (subject) */
     public String extractSubject(String token) {
         return parseClaims(token).getSubject();
     }
 
-    /** Достаём userId (claim uid) */
     public UUID extractUserId(String token) {
         String uid = parseClaims(token).get("uid", String.class);
         return UUID.fromString(uid);
     }
 
-    /** Валидность = подпись ок + токен не истёк */
     public boolean isTokenValid(String token) {
         try {
             Claims c = parseClaims(token);
@@ -64,7 +61,6 @@ public class JwtService {
     }
 
     private Claims parseClaims(String token) {
-        // Проверяет подпись и парсит payload; если подпись/формат плохие — кинет исключение
         return Jwts.parser()
                 .verifyWith(signingKey)
                 .build()

@@ -13,6 +13,7 @@ public interface UserRepository extends JpaRepository<User, UUID> {
             type = EntityGraph.EntityGraphType.FETCH)
     Optional<User> findById(UUID id);
 
+    Optional<User> findByEmail(String email);
     Optional<User> findByName(String name);
     boolean existsByName(String name);
     boolean existsByEmail(String email);

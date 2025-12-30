@@ -9,7 +9,11 @@ post:
 
   responses:
     "201":
-      description: User created
+      description: UserCreated
+      content:
+        application/json:
+          schema:
+            $ref: "../openapi.yml#/components/schemas/UserLoginResponse"
     "409":
       description: User already exists
     "400":
