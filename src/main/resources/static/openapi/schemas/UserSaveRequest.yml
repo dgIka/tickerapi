@@ -1,14 +1,15 @@
 type: object
+required:
+  - ticker
+  - start
+  - end
 properties:
   ticker:
     type: string
+    minLength: 1
   start:
     type: string
     format: date
   end:
     type: string
     format: date
-required:
-  - ticker
-  - start
-  - end

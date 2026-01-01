@@ -6,8 +6,10 @@ properties:
   ticker:
     type: string
     example: AAPL
+    minLength: 1
   data:
     type: array
+    minItems: 1
     items:
       $ref: "../openapi.yml#/components/schemas/TickerDay"
 required:

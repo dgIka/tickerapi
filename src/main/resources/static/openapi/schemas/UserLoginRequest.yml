@@ -1,10 +1,12 @@
 type: object
+required:
+  - email
+  - password
 properties:
   email:
     type: string
     format: email
   password:
     type: string
-required:
-  - email
-  - password
+    minLength: 8
+    maxLength: 64
