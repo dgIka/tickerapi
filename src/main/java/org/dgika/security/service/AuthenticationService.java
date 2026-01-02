@@ -1,6 +1,8 @@
 package org.dgika.security.service;
 
 import lombok.RequiredArgsConstructor;
+import org.dgika.api.dto.RegisterUserCommand;
+import org.dgika.api.exception.BadRequestException;
 import org.dgika.api.generated.dto.UserLoginRequest;
 import org.dgika.api.generated.dto.UserRegisterRequest;
 import org.dgika.model.User;
@@ -9,6 +11,7 @@ import org.dgika.security.auth.UserDetailsImpl;
 import org.dgika.security.jwt.JwtService;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +19,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class AuthentificationService {
+public class AuthenticationService {
 
     private final UserRepository userRepository;
     private final CustomUserDetailsService userDetailsService;
@@ -24,7 +27,7 @@ public class AuthentificationService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
 
-    public String register(UserRegisterRequest request) {
+    public String register(RegisterUserCommand request) {
         User user = User.builder()
                 .id(UUID.randomUUID())
                 .name(request.getName())
@@ -41,12 +44,16 @@ public class AuthentificationService {
 
 
     public String login(UserLoginRequest request) {
-        authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(
-                        request.getEmail(),
-                        request.getPassword()
-                )
-        );
+        try {
+            authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(
+                            request.getEmail(),
+                            request.getPassword()
+                    )
+            );
+        } catch (AuthenticationException e) {
+            throw new BadRequestException("Invalid email or password");
+        }
 
         UserDetailsImpl principal =
                 (UserDetailsImpl) userDetailsService.loadUserByUsername(request.getEmail());

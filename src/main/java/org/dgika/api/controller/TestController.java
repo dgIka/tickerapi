@@ -37,12 +37,6 @@ public class TestController {
 
 
 
-    @PostMapping("/user/save")
-    public User createUser(@RequestBody UserRegisterRequest req) {
-        return userService.addUser(RegisterMapper.mapToUserCommand(req));
-    }
-
-
     @GetMapping("/user/save_prices")
     public void saveUserPrices() {
         testService.createAndAddTestData();

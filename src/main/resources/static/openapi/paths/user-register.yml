@@ -14,8 +14,6 @@ post:
         application/json:
           schema:
             $ref: "../openapi.yml#/components/schemas/UserLoginResponse"
-    "409":
-      description: User already exists
     "400":
       description: Validation failed
       content:

@@ -1,11 +1,13 @@
 package org.dgika.service;
 
+import lombok.RequiredArgsConstructor;
 import org.dgika.api.dto.RegisterUserCommand;
+import org.dgika.api.exception.BadRequestException;
+import org.dgika.api.generated.dto.UserRegisterRequest;
 import org.dgika.model.Price;
 import org.dgika.model.User;
 import org.dgika.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.EntityGraph;
+import org.dgika.security.service.AuthenticationService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,25 +15,29 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
 
     private final UserRepository userRepository;
+    private final AuthenticationService authenticationService;
 
-    @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
-    @Transactional(readOnly = true)
-    public User addUser(RegisterUserCommand registerUserCommand) {
-        User user = User.builder()
-                .id(UUID.randomUUID())
-                .name(registerUserCommand.getName())
-                .email(registerUserCommand.getEmail())
-                .passwordHash(registerUserCommand.getPassword())
+    @Transactional
+    public String register(UserRegisterRequest urr) {
+
+        RegisterUserCommand ruc = RegisterUserCommand
+                .builder()
+                .email(urr.getEmail())
+                .name(urr.getName())
+                .password(urr.getPassword())
                 .build();
-        return userRepository.save(user);
+
+        if (userRepository.existsByEmail(ruc.getEmail())) {
+            throw new BadRequestException("User already exists");
+        }
+
+        return authenticationService.register(ruc);
     }
 
     @Transactional
@@ -43,6 +49,8 @@ public class UserService {
         }
         return user;
     }
+    
+    
 
 
 }

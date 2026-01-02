@@ -1,10 +1,13 @@
 package org.dgika.api.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.dgika.api.generated.dto.UserLoginRequest;
 import org.dgika.api.generated.dto.UserLoginResponse;
 import org.dgika.api.generated.dto.UserRegisterRequest;
-import org.dgika.security.service.AuthentificationService;
+import org.dgika.security.service.AuthenticationService;
+import org.dgika.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -12,23 +15,21 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final AuthentificationService authentificationService;
+    private final AuthenticationService authenticationService;
+    private final UserService userService;
 
     @PostMapping("/register")
-    public UserLoginResponse register (@RequestBody UserRegisterRequest userRegisterRequest) {
-        String token = authentificationService.register(userRegisterRequest);
+    @ResponseStatus(HttpStatus.CREATED)
+    public UserLoginResponse register (@Valid @RequestBody UserRegisterRequest userRegisterRequest) {
+        String token = userService.register(userRegisterRequest);
         return new UserLoginResponse(token);
     }
 
     @PostMapping("/login")
-    public UserLoginResponse login (@RequestBody UserLoginRequest userLoginRequest) {
-        String token = authentificationService.login(userLoginRequest);
+    public UserLoginResponse login (@Valid @RequestBody UserLoginRequest userLoginRequest) {
+        String token = authenticationService.login(userLoginRequest);
         return new UserLoginResponse(token);
     }
 
-    @GetMapping("/secure")
-    public String secure() {
-        return "JWT OK";
-    }
 
 }
