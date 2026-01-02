@@ -1,7 +1,10 @@
 package org.dgika.api.exception;
 
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
 public class BadRequestException extends RuntimeException{
 
     private final List<String> messages;
@@ -14,10 +17,6 @@ public class BadRequestException extends RuntimeException{
     public BadRequestException(List<String> messages) {
         super(String.join("; ", messages));
         this.messages = messages;
-    }
-
-    public List<String> getMessages() {
-        return messages;
     }
 
 }

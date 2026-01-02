@@ -20,14 +20,13 @@ public class UserController {
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public UserLoginResponse register (@Valid @RequestBody UserRegisterRequest userRegisterRequest) {
-        String token = userService.register(userRegisterRequest);
-        return new UserLoginResponse(token);
+    public void register (@Valid @RequestBody UserRegisterRequest userRegisterRequest) {
+        userService.register(userRegisterRequest);
     }
 
     @PostMapping("/login")
     public UserLoginResponse login (@Valid @RequestBody UserLoginRequest userLoginRequest) {
-        String token = authenticationService.login(userLoginRequest);
+        String token = userService.login(userLoginRequest);
         return new UserLoginResponse(token);
     }
 

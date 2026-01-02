@@ -1,6 +1,7 @@
 package org.dgika.security.service;
 
 import lombok.RequiredArgsConstructor;
+import org.dgika.api.dto.LoginUserCommand;
 import org.dgika.api.dto.RegisterUserCommand;
 import org.dgika.api.exception.BadRequestException;
 import org.dgika.api.generated.dto.UserLoginRequest;
@@ -43,7 +44,7 @@ public class AuthenticationService {
     }
 
 
-    public String login(UserLoginRequest request) {
+    public String login(LoginUserCommand request) {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(

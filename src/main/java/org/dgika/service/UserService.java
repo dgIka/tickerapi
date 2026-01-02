@@ -1,8 +1,10 @@
 package org.dgika.service;
 
 import lombok.RequiredArgsConstructor;
+import org.dgika.api.dto.LoginUserCommand;
 import org.dgika.api.dto.RegisterUserCommand;
 import org.dgika.api.exception.BadRequestException;
+import org.dgika.api.generated.dto.UserLoginRequest;
 import org.dgika.api.generated.dto.UserRegisterRequest;
 import org.dgika.model.Price;
 import org.dgika.model.User;
@@ -26,8 +28,7 @@ public class UserService {
     @Transactional
     public String register(UserRegisterRequest urr) {
 
-        RegisterUserCommand ruc = RegisterUserCommand
-                .builder()
+        RegisterUserCommand ruc = RegisterUserCommand.builder()
                 .email(urr.getEmail())
                 .name(urr.getName())
                 .password(urr.getPassword())
@@ -38,6 +39,15 @@ public class UserService {
         }
 
         return authenticationService.register(ruc);
+    }
+
+    public String login(UserLoginRequest urr) {
+        LoginUserCommand luc = LoginUserCommand.builder()
+                .email(urr.getEmail())
+                .password(urr.getPassword())
+                .build();
+
+        return authenticationService.login(luc);
     }
 
     @Transactional
