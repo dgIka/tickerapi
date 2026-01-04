@@ -2,6 +2,8 @@ package org.dgika.api.mapper;
 
 import org.dgika.api.dto.RegisterUserCommand;
 import org.dgika.api.generated.dto.UserRegisterRequest;
+import org.springframework.stereotype.Component;
+
 
 public class RegisterMapper {
 

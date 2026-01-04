@@ -6,6 +6,8 @@ import org.dgika.api.dto.RegisterUserCommand;
 import org.dgika.api.exception.BadRequestException;
 import org.dgika.api.generated.dto.UserLoginRequest;
 import org.dgika.api.generated.dto.UserRegisterRequest;
+import org.dgika.api.mapper.LoginMapper;
+import org.dgika.api.mapper.RegisterMapper;
 import org.dgika.model.Price;
 import org.dgika.model.User;
 import org.dgika.repository.UserRepository;
@@ -28,11 +30,7 @@ public class UserService {
     @Transactional
     public String register(UserRegisterRequest urr) {
 
-        RegisterUserCommand ruc = RegisterUserCommand.builder()
-                .email(urr.getEmail())
-                .name(urr.getName())
-                .password(urr.getPassword())
-                .build();
+        RegisterUserCommand ruc = RegisterMapper.mapToUserCommand(urr);
 
         if (userRepository.existsByEmail(ruc.getEmail())) {
             throw new BadRequestException("User already exists");
@@ -42,11 +40,7 @@ public class UserService {
     }
 
     public String login(UserLoginRequest urr) {
-        LoginUserCommand luc = LoginUserCommand.builder()
-                .email(urr.getEmail())
-                .password(urr.getPassword())
-                .build();
-
+        LoginUserCommand luc = LoginMapper.mapToCommand(urr);
         return authenticationService.login(luc);
     }
 
