@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15bb918-1f40-4ffc-8a68-b9a06d438b59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/mapper/LoginMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/AuthControllerIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/95915587-e5ca-4301-90b9-6a6b035d3284.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/95915587-e5ca-4301-90b9-6a6b035d3284.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/95915587-e5ca-4301-90b9-6a6b035d3284/storage_v2/_src_/database/tickerapi.0LrB-w/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/95915587-e5ca-4301-90b9-6a6b035d3284/storage_v2/_src_/database/tickerapi.0LrB-w/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/DatabaseIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/mapper/RegisterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/mapper/RegisterMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/AuthControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/AuthControllerIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +43,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -54,37 +54,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.AuthControllerIT.executor": "Run",
-    "JUnit.AuthControllerIT.shouldRegisterUser.executor": "Run",
-    "Maven.tickerAPI [clean].executor": "Run",
-    "Maven.tickerAPI [compile].executor": "Run",
-    "Maven.tickerAPI [package].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.TickerApiApp.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/JAVA/MyJava/javarush/tickerAPI/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.AuthControllerIT.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthControllerIT.shouldRegisterUser.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tickerAPI [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tickerAPI [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tickerAPI [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TickerApiApp.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JAVA/MyJava/javarush/tickerAPI/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.AuthControllerIT">
+}</component>
+  <component name="RunManager" selected="JUnit.DatabaseIntegrationTest">
     <configuration name="AuthControllerIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tickerAPI" />
       <extension name="coverage">
@@ -116,6 +116,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DatabaseIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tickerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dgika.api.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.DatabaseIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TickerApiApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="tickerAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.dgika.TickerApiApp" />
@@ -131,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DatabaseIntegrationTest" />
         <item itemvalue="JUnit.AuthControllerIT" />
         <item itemvalue="JUnit.AuthControllerIT.shouldRegisterUser" />
         <item itemvalue="Spring Boot.TickerApiApp" />
@@ -168,7 +184,9 @@
       <workItem from="1767280193133" duration="10734000" />
       <workItem from="1767344140390" duration="6852000" />
       <workItem from="1767431675126" duration="11755000" />
-      <workItem from="1767524266972" duration="10886000" />
+      <workItem from="1767524266972" duration="11054000" />
+      <workItem from="1767606337322" duration="9934000" />
+      <workItem from="1767690021389" duration="13443000" />
     </task>
     <servers />
   </component>

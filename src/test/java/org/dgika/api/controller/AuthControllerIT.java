@@ -74,4 +74,39 @@ public class AuthControllerIT {
 
     }
 
+    @Test
+    @Order(4)
+    void shouldReturnIsOk() throws Exception {
+
+        mockMvc.perform(post("/api/user/login")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+            {
+              "name": "TestTI",
+              "email": "testTI@mail.com",
+              "password": "12345678"
+            }
+        """))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.token").isString())
+                .andExpect(jsonPath("$.token").isNotEmpty());
+
+    }
+
+    @Test
+    @Order(5)
+    void shouldReturnBedRequestWithInvalidCredentials() throws Exception {
+
+        mockMvc.perform(post("/api/user/register")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+            {
+              "email": "testTImail.com",
+              "password": "12345"
+            }
+        """))
+                .andExpect(status().isBadRequest());
+
+    }
+
 }
