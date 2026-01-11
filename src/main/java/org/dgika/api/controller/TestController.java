@@ -1,7 +1,10 @@
 package org.dgika.api.controller;
 
 import org.dgika.api.generated.dto.UserRegisterRequest;
+import org.dgika.api.generated.dto.UserSaveRequest;
 import org.dgika.api.mapper.RegisterMapper;
+import org.dgika.massive.MassiveClient;
+import org.dgika.massive.dto.MassiveAggregatesResponse;
 import org.dgika.model.Price;
 import org.dgika.model.Ticker;
 import org.dgika.model.User;
@@ -26,13 +29,15 @@ public class TestController {
     private UserService userService;
     private PriceService priceService;
     private TestService testService;
+    private MassiveClient massiveClient;
 
     @Autowired
-    public TestController(TickerService tickerService, UserService userService, PriceService priceService, TestService testService) {
+    public TestController(TickerService tickerService, UserService userService, PriceService priceService, TestService testService, MassiveClient massiveClient) {
         this.tickerService = tickerService;
         this.userService = userService;
         this.priceService = priceService;
         this.testService = testService;
+        this.massiveClient = massiveClient;
     }
 
 
@@ -48,5 +53,15 @@ public class TestController {
         tickerTest1.forEach(System.out::println);
     }
 
+    @PostMapping("/massive")
+    public void testExternalAPi(@RequestBody UserSaveRequest userSaveRequest) {
+        System.out.println(userSaveRequest);
+        MassiveAggregatesResponse mar = massiveClient.getDayAggregates(
+                userSaveRequest.getTicker(),
+                userSaveRequest.getStart(),
+                userSaveRequest.getEnd()
+        );
+        mar.results().forEach(System.out::println);
+    }
 
 }
