@@ -1,5 +1,6 @@
 package org.dgika.api.controller;
 
+import jakarta.validation.Valid;
 import org.dgika.api.generated.dto.UserRegisterRequest;
 import org.dgika.api.generated.dto.UserSaveRequest;
 import org.dgika.api.mapper.RegisterMapper;
@@ -54,7 +55,7 @@ public class TestController {
     }
 
     @PostMapping("/massive")
-    public void testExternalAPi(@RequestBody UserSaveRequest userSaveRequest) {
+    public void testExternalAPi(@Valid @RequestBody UserSaveRequest userSaveRequest) {
         System.out.println(userSaveRequest);
         MassiveAggregatesResponse mar = massiveClient.getDayAggregates(
                 userSaveRequest.getTicker(),

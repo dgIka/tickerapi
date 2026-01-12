@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15bb918-1f40-4ffc-8a68-b9a06d438b59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/massive/MassiveClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/massive/MassiveConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/massive/MassiveProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/massive/dto/MassiveAggregatesResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/dto/MassiveAggregatesMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/TickerApiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/TickerApiApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/AuthController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/AuthControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/AuthControllerIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/DatabaseIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/repository/PriceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/repository/PriceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/TickerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/TickerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +208,8 @@
       <workItem from="1767890469108" duration="2056000" />
       <workItem from="1768042585910" duration="3686000" />
       <workItem from="1768075433450" duration="3227000" />
-      <workItem from="1768124182253" duration="19893000" />
+      <workItem from="1768124182253" duration="20470000" />
+      <workItem from="1768203769439" duration="21062000" />
     </task>
     <servers />
   </component>
