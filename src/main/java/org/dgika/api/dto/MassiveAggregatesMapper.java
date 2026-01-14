@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class MassiveAggregatesMapper {
-    public List<TickerDay> toTickerDays(MassiveAggregatesResponse response) {
+    static public List<TickerDay> toTickerDays(MassiveAggregatesResponse response) {
         if (response == null || response.results() == null || response.results().isEmpty()) {
             return List.of();
         }

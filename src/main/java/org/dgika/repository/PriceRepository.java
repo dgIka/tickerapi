@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
+import java.lang.Double;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
@@ -31,11 +31,11 @@ public interface PriceRepository extends CrudRepository<Price, UUID> {
     SELECT :userId, id FROM ins
     ON CONFLICT (user_id, price_id) DO NOTHING
     """, nativeQuery = true)
-    void insertPriceAndLinkIfNew(UUID userId,
+    void insertPrice(UUID userId,
                                  UUID tickerId,
                                  LocalDate date,
-                                 BigDecimal open,
-                                 BigDecimal close,
-                                 BigDecimal high,
-                                 BigDecimal low);
+                                 Double open,
+                                 Double close,
+                                 Double high,
+                                 Double low);
 }

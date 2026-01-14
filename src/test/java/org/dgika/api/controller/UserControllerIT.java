@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @TestMethodOrder(OrderAnnotation.class)
 @Testcontainers
-public class AuthControllerIT {
+public class UserControllerIT {
 
     @Autowired
     private MockMvc mockMvc;

@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15bb918-1f40-4ffc-8a68-b9a06d438b59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/dto/MassiveAggregatesMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/TestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/dto/MassiveAggregatesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/dto/MassiveAggregatesMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/repository/PriceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/repository/PriceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/repository/TickerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/repository/TickerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/TestService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/TickerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/TickerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/AuthControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/UserControllerIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,37 +95,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TickerApiApp">
-    <configuration name="AuthControllerIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tickerAPI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dgika.api.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.AuthControllerIT" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthControllerIT.shouldRegisterUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tickerAPI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dgika.api.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.AuthControllerIT" />
-      <option name="METHOD_NAME" value="shouldRegisterUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DatabaseIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tickerAPI" />
       <extension name="coverage">
@@ -134,6 +106,37 @@
       <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
       <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.DatabaseIntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tickerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dgika.api.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.UserControllerIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerIT.shouldRegisterUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tickerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dgika.api.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.UserControllerIT" />
+      <option name="METHOD_NAME" value="shouldRegisterUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,17 +158,17 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AuthControllerIT" />
-      <item itemvalue="JUnit.AuthControllerIT.shouldRegisterUser" />
+      <item itemvalue="JUnit.UserControllerIT" />
+      <item itemvalue="JUnit.UserControllerIT.shouldRegisterUser" />
       <item itemvalue="JUnit.DatabaseIntegrationTest" />
       <item itemvalue="Spring Boot.TickerApiApp" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.TickerApiApp" />
-        <item itemvalue="JUnit.AuthControllerIT" />
+        <item itemvalue="JUnit.UserControllerIT" />
         <item itemvalue="JUnit.DatabaseIntegrationTest" />
-        <item itemvalue="JUnit.AuthControllerIT.shouldRegisterUser" />
+        <item itemvalue="JUnit.UserControllerIT.shouldRegisterUser" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +212,9 @@
       <workItem from="1768042585910" duration="3686000" />
       <workItem from="1768075433450" duration="3227000" />
       <workItem from="1768124182253" duration="20470000" />
-      <workItem from="1768203769439" duration="21062000" />
+      <workItem from="1768203769439" duration="21418000" />
+      <workItem from="1768302628727" duration="14795000" />
+      <workItem from="1768381621871" duration="5375000" />
     </task>
     <servers />
   </component>
