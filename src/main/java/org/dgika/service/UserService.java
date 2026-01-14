@@ -43,18 +43,4 @@ public class UserService {
         LoginUserCommand luc = LoginMapper.mapToCommand(urr);
         return authenticationService.login(luc);
     }
-
-    @Transactional
-    public User saveUserPrices(UUID userId, List<Price> prices) {
-        User user = userRepository.findById(userId).orElse(null);
-
-        if (user != null) {
-            prices.forEach(price -> {user.getPrices().add(price);});
-        }
-        return user;
-    }
-    
-    
-
-
 }

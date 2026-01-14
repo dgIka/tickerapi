@@ -1,5 +1,9 @@
 package org.dgika.service;
 
+import lombok.RequiredArgsConstructor;
+import org.dgika.api.exception.BadRequestException;
+import org.dgika.api.generated.dto.TickerDay;
+import org.dgika.api.generated.dto.UserSavedResponse;
 import org.dgika.model.Price;
 import org.dgika.model.Ticker;
 import org.dgika.repository.PriceRepository;
@@ -13,14 +17,12 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class PriceService {
 
     private final PriceRepository priceRepository;
+    private final TickerRepository tickerRepository;
 
-    @Autowired
-    public PriceService(PriceRepository priceRepository) {
-        this.priceRepository = priceRepository;
-    }
 
     @Transactional
     public Price save(Price price) {
@@ -33,7 +35,22 @@ public class PriceService {
     }
 
     @Transactional(readOnly = true)
-    public List<Price> findAllByUserIdAndTickerName(UUID userId, String tickerName) {
-        return priceRepository.findAllByUsers_IdAndTicker_Name(userId, tickerName);
+    public UserSavedResponse findAllByUserIdAndTickerName(UUID userId, String tickerName) {
+        String name = tickerName.toUpperCase();
+
+        tickerRepository.findByName(name)
+                .orElseThrow(() -> new BadRequestException("Unknown ticker"));
+
+        List<Price> prices = priceRepository.findAllByUsers_IdAndTicker_Name(userId, name);
+
+        List<TickerDay> result = prices.stream().map(price -> {
+            return new TickerDay(price.getDate(),
+                    price.getOpen(),
+                    price.getClose(),
+                    price.getHigh(),
+                    price.getLow());
+        }).toList();
+
+        return new UserSavedResponse(userId, name, result);
     }
 }

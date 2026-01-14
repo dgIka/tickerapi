@@ -4,7 +4,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.dgika.api.generated.dto.*;
 import org.dgika.security.auth.UserDetailsImpl;
-import org.dgika.security.service.AuthenticationService;
+import org.dgika.service.PriceService;
 import org.dgika.service.TickerService;
 import org.dgika.service.UserService;
 import org.springframework.http.HttpStatus;
@@ -18,9 +18,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
 
-    private final AuthenticationService authenticationService;
     private final UserService userService;
     private final TickerService tickerService;
+    private final PriceService priceService;
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
@@ -38,6 +38,12 @@ public class UserController {
     public List<TickerDay> save (@Valid @RequestBody UserSaveRequest userSaveRequest, Authentication authentication) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         return tickerService.findAndSave(userSaveRequest, userDetails.getUserId());
+    }
+
+    @GetMapping("/saved")
+    public UserSavedResponse saved(@RequestParam("ticker") String tickerName, Authentication authentication) {
+        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+        return priceService.findAllByUserIdAndTickerName(userDetails.getUserId(), tickerName);
     }
 
 
