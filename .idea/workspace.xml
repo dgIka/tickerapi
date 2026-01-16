@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15bb918-1f40-4ffc-8a68-b9a06d438b59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/UserControllerTickerIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/PriceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/PriceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +57,7 @@
     &quot;JUnit.AuthControllerIT.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.AuthControllerIT.shouldRegisterUser.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.DatabaseIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTickerIT.saveTicker.executor&quot;: &quot;Run&quot;,
     &quot;Maven.tickerAPI [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.tickerAPI [compile].executor&quot;: &quot;Run&quot;,
     &quot;Maven.tickerAPI [package].executor&quot;: &quot;Run&quot;,
@@ -89,7 +89,7 @@
       <recent name="org.dgika.massive" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TickerApiApp">
+  <component name="RunManager" selected="JUnit.UserControllerTickerIT.saveTicker">
     <configuration name="DatabaseIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tickerAPI" />
       <extension name="coverage">
@@ -136,6 +136,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserControllerTickerIT.saveTicker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tickerAPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dgika.api.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.UserControllerTickerIT" />
+      <option name="METHOD_NAME" value="saveTicker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TickerApiApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="POLYGON_API_KEY" value="Usyt2spvOGxwGuDDHpwZsferqV3yKTpT" />
@@ -153,6 +169,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.UserControllerTickerIT.saveTicker" />
       <item itemvalue="JUnit.UserControllerIT" />
       <item itemvalue="JUnit.UserControllerIT.shouldRegisterUser" />
       <item itemvalue="JUnit.DatabaseIntegrationTest" />
@@ -160,6 +177,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserControllerTickerIT.saveTicker" />
         <item itemvalue="Spring Boot.TickerApiApp" />
         <item itemvalue="JUnit.UserControllerIT" />
         <item itemvalue="JUnit.DatabaseIntegrationTest" />
@@ -209,7 +227,9 @@
       <workItem from="1768124182253" duration="20470000" />
       <workItem from="1768203769439" duration="21418000" />
       <workItem from="1768302628727" duration="14795000" />
-      <workItem from="1768381621871" duration="10765000" />
+      <workItem from="1768381621871" duration="12594000" />
+      <workItem from="1768466171835" duration="30334000" />
+      <workItem from="1768553887533" duration="1069000" />
     </task>
     <servers />
   </component>
