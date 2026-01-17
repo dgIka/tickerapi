@@ -43,13 +43,11 @@ public class PriceService {
 
         List<Price> prices = priceRepository.findAllByUsers_IdAndTicker_Name(userId, name);
 
-        List<TickerDay> result = prices.stream().map(price -> {
-            return new TickerDay(price.getDate(),
-                    price.getOpen(),
-                    price.getClose(),
-                    price.getHigh(),
-                    price.getLow());
-        }).toList();
+        List<TickerDay> result = prices.stream().map(price -> new TickerDay(price.getDate(),
+                price.getOpen(),
+                price.getClose(),
+                price.getHigh(),
+                price.getLow())).toList();
 
         return new UserSavedResponse(userId, name, result);
     }

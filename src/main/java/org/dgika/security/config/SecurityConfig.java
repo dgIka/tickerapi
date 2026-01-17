@@ -1,5 +1,6 @@
 package org.dgika.security.config;
 
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.dgika.security.jwt.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
@@ -31,6 +32,14 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .cors(withDefaults())
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .exceptionHandling(ex -> ex
+                        .authenticationEntryPoint((request, response, authException) ->
+                                response.sendError(HttpServletResponse.SC_UNAUTHORIZED)
+                        )
+                        .accessDeniedHandler((request, response, accessDeniedException) ->
+                                response.sendError(HttpServletResponse.SC_FORBIDDEN)
+                        )
+                )
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/api/user/register",

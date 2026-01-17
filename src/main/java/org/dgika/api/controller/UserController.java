@@ -35,6 +35,7 @@ public class UserController {
     }
 
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public List<TickerDay> save (@Valid @RequestBody UserSaveRequest userSaveRequest, Authentication authentication) {
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
         return tickerService.findAndSave(userSaveRequest, userDetails.getUserId());

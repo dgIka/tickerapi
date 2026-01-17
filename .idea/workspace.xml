@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15bb918-1f40-4ffc-8a68-b9a06d438b59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/UserControllerTickerIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/SavedITTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/PriceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/PriceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/openapi/paths/user-saved.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/openapi/paths/user-saved.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/UserControllerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/UserControllerITTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/UserControllerTickerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/SaveITTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,45 +58,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.AuthControllerIT.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AuthControllerIT.shouldRegisterUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DatabaseIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserControllerTickerIT.saveTicker.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tickerAPI [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tickerAPI [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tickerAPI [package].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TickerApiApp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JAVA/MyJava/javarush/tickerAPI/pom.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AuthControllerIT.executor": "Run",
+    "JUnit.AuthControllerIT.shouldRegisterUser.executor": "Run",
+    "JUnit.DatabaseIntegrationTest.executor": "Run",
+    "JUnit.SavedITTest.getSaved.executor": "Run",
+    "JUnit.UserControllerTickerIT.saveTicker.executor": "Run",
+    "JUnit.UserControllerTickerIT.saveUnauthorized.executor": "Run",
+    "JUnit.UserControllerTickerIT.saveWithBadValidation.executor": "Run",
+    "JUnit.UserControllerTickerITTest.getSaved (1).executor": "Run",
+    "JUnit.UserControllerTickerITTest.getSaved.executor": "Run",
+    "Maven.tickerAPI [clean].executor": "Run",
+    "Maven.tickerAPI [compile].executor": "Run",
+    "Maven.tickerAPI [package].executor": "Run",
+    "Maven.tickerAPI [test].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.TickerApiApp.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/JAVA/MyJava/javarush/tickerAPI/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.dgika.massive" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTickerIT.saveTicker">
-    <configuration name="DatabaseIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SavedITTest.shouldReturnBadRequest">
+    <configuration name="SaveITTest.getSaved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tickerAPI" />
       <extension name="coverage">
         <pattern>
@@ -99,44 +111,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.DatabaseIntegrationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tickerAPI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dgika.api.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.UserControllerIT" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerIT.shouldRegisterUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tickerAPI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dgika.api.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.UserControllerIT" />
-      <option name="METHOD_NAME" value="shouldRegisterUser" />
+      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.SaveITTest" />
+      <option name="METHOD_NAME" value="getSaved" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTickerIT.saveTicker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SavedITTest.getSaved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tickerAPI" />
       <extension name="coverage">
         <pattern>
@@ -145,43 +127,83 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
-      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.UserControllerTickerIT" />
-      <option name="METHOD_NAME" value="saveTicker" />
+      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.SavedITTest" />
+      <option name="METHOD_NAME" value="getSaved" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TickerApiApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <envs>
-        <env name="POLYGON_API_KEY" value="Usyt2spvOGxwGuDDHpwZsferqV3yKTpT" />
-      </envs>
+    <configuration name="SavedITTest.shouldReturnBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tickerAPI" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.dgika.TickerApiApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.dgika.*" />
+          <option name="PATTERN" value="org.dgika.api.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.dgika.api.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.dgika.api.controller.SavedITTest" />
+      <option name="METHOD_NAME" value="shouldReturnBadRequest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="UserControllerTickerITTest.getSaved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tickerAPI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserControllerTickerITTest" />
+      <option name="METHOD_NAME" value="getSaved" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tickerAPI [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserControllerTickerIT.saveTicker" />
-      <item itemvalue="JUnit.UserControllerIT" />
-      <item itemvalue="JUnit.UserControllerIT.shouldRegisterUser" />
-      <item itemvalue="JUnit.DatabaseIntegrationTest" />
-      <item itemvalue="Spring Boot.TickerApiApp" />
+      <item itemvalue="JUnit.SaveITTest.getSaved" />
+      <item itemvalue="JUnit.SavedITTest.getSaved" />
+      <item itemvalue="JUnit.SavedITTest.shouldReturnBadRequest" />
+      <item itemvalue="JUnit.UserControllerTickerITTest.getSaved" />
+      <item itemvalue="Maven.tickerAPI [test]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTickerIT.saveTicker" />
-        <item itemvalue="Spring Boot.TickerApiApp" />
-        <item itemvalue="JUnit.UserControllerIT" />
-        <item itemvalue="JUnit.DatabaseIntegrationTest" />
-        <item itemvalue="JUnit.UserControllerIT.shouldRegisterUser" />
+        <item itemvalue="JUnit.SavedITTest.shouldReturnBadRequest" />
+        <item itemvalue="JUnit.SavedITTest.getSaved" />
+        <item itemvalue="JUnit.SaveITTest.getSaved" />
+        <item itemvalue="JUnit.UserControllerTickerITTest.getSaved" />
+        <item itemvalue="Maven.tickerAPI [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +251,8 @@
       <workItem from="1768302628727" duration="14795000" />
       <workItem from="1768381621871" duration="12594000" />
       <workItem from="1768466171835" duration="30334000" />
-      <workItem from="1768553887533" duration="1069000" />
+      <workItem from="1768553887533" duration="14032000" />
+      <workItem from="1768637708962" duration="18044000" />
     </task>
     <servers />
   </component>

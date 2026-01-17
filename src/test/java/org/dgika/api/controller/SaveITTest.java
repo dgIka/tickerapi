@@ -1,7 +1,7 @@
 package org.dgika.api.controller;
 
-import com.github.tomakehurst.wiremock.WireMockServer;
 import org.junit.jupiter.api.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,21 +10,30 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+
 import org.testcontainers.containers.PostgreSQLContainer;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import static com.github.tomakehurst.wiremock.client.WireMock.*;
+import com.github.tomakehurst.wiremock.WireMockServer;
+import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
+import static com.github.tomakehurst.wiremock.client.WireMock.urlPathMatching;
+import static com.github.tomakehurst.wiremock.client.WireMock.matching;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+
 
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class UserControllerTickerIT {
+public class SaveITTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -71,7 +80,9 @@ public class UserControllerTickerIT {
     void stubs() {
         wireMockServer.resetAll();
 
-        wireMockServer.stubFor(get(urlPathMatching("/v2/aggs/ticker/[^/]+/range/1/day/[^/]+/[^/]+"))
+        wireMockServer.stubFor(
+                com.github.tomakehurst.wiremock.client.WireMock.get(
+                                urlPathMatching("/v2/aggs/ticker/[^/]+/range/1/day/[^/]+/[^/]+"))
                 .withHeader("Authorization", matching("Bearer .*"))
                 .willReturn(aResponse()
                         .withStatus(200)
@@ -91,6 +102,7 @@ public class UserControllerTickerIT {
     }
 
     @Test
+    @Order(1)
     void saveTicker() throws Exception {
         mockMvc.perform(post("/api/user/save")
                         .header("Authorization", "Bearer " + token)
@@ -102,8 +114,53 @@ public class UserControllerTickerIT {
                   "end":"2025-02-03"
                 }
             """))
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$").isArray())
+                .andExpect(jsonPath("$.length()").isNumber())
+                .andExpect(jsonPath("$.length()").value(2));
+    }
+
+    @Test
+    @Order(2)
+    void saveWithBadValidation() throws Exception {
+        mockMvc.perform(post("/api/user/save")
+                        .header("Authorization", "Bearer " + token)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+                {
+                  "ticker":"",
+                  "start":"2025-01-01",
+                  "end":"2025-02-03"
+                }
+            """))
+                .andExpect(status().isBadRequest());
+    }
+
+    @Test
+    @Order(3)
+    void saveUnauthorized() throws Exception {
+        mockMvc.perform(post("/api/user/save")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+                {
+                  "ticker":"AAPL",
+                  "start":"2025-01-01",
+                  "end":"2025-02-03"
+                }
+            """))
+                .andExpect(status().isUnauthorized());
+    }
+
+    @Test
+    @Order(4)
+    void getSaved() throws Exception {
+        mockMvc.perform(get("/api/user/saved")
+                        .param("ticker", "AAPL")
+                        .header("Authorization", "Bearer " + token)
+                        .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }
+
 
 
     private void register() throws Exception {

@@ -1,4 +1,4 @@
-get:
+ get:
   summary: Get saved tickers for the user
   description: Returns a list of tickers that the user has previously saved.
   parameters:
