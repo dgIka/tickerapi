@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15bb918-1f40-4ffc-8a68-b9a06d438b59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/dgika/web/filter/RequestLoggingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/massive/MassiveClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/massive/MassiveClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/security/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/security/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/PriceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/PriceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/TickerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/TickerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +236,9 @@
       <workItem from="1768466171835" duration="30334000" />
       <workItem from="1768553887533" duration="14032000" />
       <workItem from="1768637708962" duration="20243000" />
-      <workItem from="1768727818876" duration="9959000" />
+      <workItem from="1768727818876" duration="10186000" />
+      <workItem from="1768768224837" duration="8000" />
+      <workItem from="1768808960301" duration="14594000" />
     </task>
     <servers />
   </component>

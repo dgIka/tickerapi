@@ -1,6 +1,7 @@
 package org.dgika.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.dgika.api.exception.BadRequestException;
 import org.dgika.api.generated.dto.TickerDay;
 import org.dgika.api.generated.dto.UserSavedResponse;
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class PriceService {
@@ -23,23 +25,17 @@ public class PriceService {
     private final PriceRepository priceRepository;
     private final TickerRepository tickerRepository;
 
-
-    @Transactional
-    public Price save(Price price) {
-        return priceRepository.save(price);
-    }
-
-    @Transactional(readOnly = true)
-    public List<LocalDate> findExistingDates(UUID userId, String tickerName, LocalDate start, LocalDate end) {
-        return priceRepository.findExistingDates(userId, tickerName, start, end);
-    }
-
     @Transactional(readOnly = true)
     public UserSavedResponse findAllByUserIdAndTickerName(UUID userId, String tickerName) {
+        long startNs = System.nanoTime();
+
         String name = tickerName.toUpperCase();
 
-        tickerRepository.findByName(name)
-                .orElseThrow(() -> new BadRequestException("Unknown ticker"));
+        boolean exists = tickerRepository.findByName(name).isPresent();
+        if (!exists) {
+            log.warn("event=user_saved_prices_failed userId={} ticker={} reason=unknown_ticker", userId, name);
+            throw new BadRequestException("Unknown ticker");
+        }
 
         List<Price> prices = priceRepository.findAllByUsers_IdAndTicker_Name(userId, name);
 
@@ -48,6 +44,10 @@ public class PriceService {
                 price.getClose(),
                 price.getHigh(),
                 price.getLow())).toList();
+
+        long durationMs = (System.nanoTime() - startNs) / 1_000_000;
+        log.info("event=user_saved_prices userId={} ticker={} count={} durationMs={}",
+                userId, name, result.size(), durationMs);
 
         return new UserSavedResponse(userId, name, result);
     }

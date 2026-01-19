@@ -15,7 +15,6 @@ public class MassiveClient {
     private final RestClient massiveRestClient;
 
     public MassiveAggregatesResponse getDayAggregates(String ticker, LocalDate start, LocalDate end) {
-        System.out.println(props.key());
         return massiveRestClient.get().uri(uriBuilder -> uriBuilder
                 .path("/v2/aggs/ticker/{ticker}/range/1/day/{start}/{end}")
                 .build(ticker, start, end)

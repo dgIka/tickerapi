@@ -1,6 +1,7 @@
 package org.dgika.security.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.dgika.api.dto.LoginUserCommand;
 import org.dgika.api.dto.RegisterUserCommand;
 import org.dgika.api.exception.BadRequestException;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
@@ -39,6 +41,8 @@ public class AuthenticationService {
 
         userRepository.save(user);
 
+        log.info("event=auth_register userId={} email={}", user.getId(), request.getEmail());
+
         UserDetailsImpl principal = new UserDetailsImpl(user);
         return jwtService.generateToken(principal);
     }
@@ -58,6 +62,8 @@ public class AuthenticationService {
 
         UserDetailsImpl principal =
                 (UserDetailsImpl) userDetailsService.loadUserByUsername(request.getEmail());
+
+        log.info("event=auth_login userId={} email={}", principal.getUserId(), request.getEmail());
 
         return jwtService.generateToken(principal);
     }

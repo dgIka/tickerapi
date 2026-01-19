@@ -1,6 +1,7 @@
 package org.dgika.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.dgika.api.dto.MassiveAggregatesMapper;
 import org.dgika.api.exception.BadRequestException;
 import org.dgika.api.generated.dto.TickerDay;
@@ -19,6 +20,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class TickerService {
@@ -27,18 +29,15 @@ public class TickerService {
     private final MassiveClient massiveClient;
     private final PriceRepository priceRepository;
 
-    @Transactional(readOnly = true)
-    public Ticker save(Ticker ticker) {
-        return tickerRepository.save(ticker);
-    }
-
-    @Transactional(readOnly = true)
-    public Optional<Ticker> findByName(String name) {
-        return tickerRepository.findByName(name);
-    }
-
     @Transactional
     public List<TickerDay> findAndSave(UserSaveRequest usr, UUID userId) {
+        long startNs = System.nanoTime();
+
+        String name = usr.getTicker().toUpperCase();
+
+        log.info("event=prices_import_start userId={} ticker={} start={} end={}",
+                userId, name, usr.getStart(), usr.getEnd());
+
         if (usr.getStart().isAfter(usr.getEnd())) {
             throw new BadRequestException("Start date cannot be after end date");
         }
@@ -46,8 +45,6 @@ public class TickerService {
         if(usr.getStart().isBefore(LocalDate.now().minusYears(2))) {
             throw new BadRequestException("Start shouldn't be older than 2 years");
         }
-
-        String name = usr.getTicker().toUpperCase();
 
         tickerRepository.insertIgnore(name);
         Ticker ticker = tickerRepository.findByName(name)
@@ -75,6 +72,10 @@ public class TickerService {
                 r.getClose(),
                 r.getHigh(),
                 r.getLow()));
+
+        long durationMs = (System.nanoTime() - startNs) / 1_000_000;
+        log.info("event=prices_import_done userId={} ticker={} saved={} durationMs={}",
+                userId, name, result.size(), durationMs);
 
         return result;
     }

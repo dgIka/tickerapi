@@ -49,3 +49,8 @@
 2026-01-18 23:25:06 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
 2026-01-18 23:25:06 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=400 durationMs=173
 2026-01-18 23:25:12 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/login status=200 durationMs=193
+2026-01-18 23:28:48 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-18 23:28:48 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-18 23:28:48 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-18 23:28:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-18 23:28:48 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
