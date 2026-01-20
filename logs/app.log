@@ -1864,3 +1864,644 @@ java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceed
 2026-01-20 13:13:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-01-20 13:13:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
 2026-01-20 13:13:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-01-20 15:46:27 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-20 15:46:28 INFO  o.dgika.api.controller.SavedITTest - Starting SavedITTest using Java 21.0.2 with PID 16284 (started by rexar.ika in D:\JAVA\MyJava\javarush\tickerAPI)
+2026-01-20 15:46:28 INFO  o.dgika.api.controller.SavedITTest - The following 1 profile is active: "test"
+2026-01-20 15:46:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20 15:46:29 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2026-01-20 15:46:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-20 15:46:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@337a9406
+2026-01-20 15:46:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-20 15:46:29 INFO  liquibase.database - Set default schema name to public
+2026-01-20 15:46:30 INFO  liquibase.changelog - Creating database changelog table with name: public.databasechangelog
+2026-01-20 15:46:30 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:46:30 INFO  liquibase.snapshot - Creating snapshot
+2026-01-20 15:46:30 INFO  liquibase.lockservice - Successfully acquired change log lock
+2026-01-20 15:46:30 INFO  liquibase.command - Using deploymentId: 8913189538
+2026-01-20 15:46:30 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:46:30 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika
+2026-01-20 15:46:30 INFO  liquibase.changelog - Custom SQL executed
+2026-01-20 15:46:30 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika ran successfully in 20ms
+2026-01-20 15:46:30 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-2-create-users::dgika
+2026-01-20 15:46:30 INFO  liquibase.changelog - Table users created
+2026-01-20 15:46:30 INFO  liquibase.changelog - Unique constraint added to users(email)
+2026-01-20 15:46:30 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-2-create-users::dgika ran successfully in 8ms
+2026-01-20 15:46:30 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you
+2026-01-20 15:46:30 INFO  liquibase.changelog - Table tickers created
+2026-01-20 15:46:30 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you ran successfully in 4ms
+2026-01-20 15:46:30 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-prices-table::you
+2026-01-20 15:46:30 INFO  liquibase.changelog - Table prices created
+2026-01-20 15:46:30 INFO  liquibase.changelog - Unique constraint added to prices(ticker_id, date)
+2026-01-20 15:46:30 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-prices-table::you ran successfully in 8ms
+2026-01-20 15:46:30 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you
+2026-01-20 15:46:30 INFO  liquibase.changelog - Table user_prices created
+2026-01-20 15:46:30 INFO  liquibase.changelog - Primary key added to user_prices (user_id, price_id)
+2026-01-20 15:46:30 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you ran successfully in 6ms
+2026-01-20 15:46:30 INFO  liquibase.util - UPDATE SUMMARY
+2026-01-20 15:46:30 INFO  liquibase.util - Run:                          5
+2026-01-20 15:46:30 INFO  liquibase.util - Previously run:               0
+2026-01-20 15:46:30 INFO  liquibase.util - Filtered out:                 0
+2026-01-20 15:46:30 INFO  liquibase.util - -------------------------------
+2026-01-20 15:46:30 INFO  liquibase.util - Total change sets:            5
+2026-01-20 15:46:30 INFO  liquibase.util - Update summary generated
+2026-01-20 15:46:30 INFO  liquibase.command - Update command completed successfully.
+2026-01-20 15:46:30 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 0
+2026-01-20 15:46:30 INFO  liquibase.lockservice - Successfully released change log lock
+2026-01-20 15:46:30 INFO  liquibase.command - Command execution complete
+2026-01-20 15:46:31 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20 15:46:31 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.36.Final
+2026-01-20 15:46:31 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-20 15:46:31 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20 15:46:31 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20 15:46:32 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20 15:46:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:46:33 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-01-20 15:46:33 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-20 15:46:33 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20 15:46:34 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-20 15:46:34 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-20 15:46:34 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-01-20 15:46:34 INFO  o.dgika.api.controller.SavedITTest - Started SavedITTest in 7.296 seconds (process running for 12.135)
+2026-01-20 15:46:35 INFO  o.d.s.service.AuthenticationService - event=auth_register userId=9b7ff87a-17f4-4ecc-a9ae-b089e3bf1488 email=testTI@mail.com
+2026-01-20 15:46:35 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=201 durationMs=417
+2026-01-20 15:46:35 INFO  o.d.s.service.AuthenticationService - event=auth_login userId=9b7ff87a-17f4-4ecc-a9ae-b089e3bf1488 email=testTI@mail.com
+2026-01-20 15:46:35 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/login status=200 durationMs=138
+2026-01-20 15:46:35 INFO  org.dgika.service.PriceService - event=user_saved_prices userId=9b7ff87a-17f4-4ecc-a9ae-b089e3bf1488 ticker=AAPL count=2 durationMs=12
+2026-01-20 15:46:35 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=GET path=/api/user/saved status=200 durationMs=67
+2026-01-20 15:46:35 WARN  org.dgika.service.PriceService - event=user_saved_prices_failed userId=9b7ff87a-17f4-4ecc-a9ae-b089e3bf1488 ticker= reason=unknown_ticker
+2026-01-20 15:46:35 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=GET path=/api/user/saved status=400 durationMs=17
+2026-01-20 15:46:36 INFO  tc.postgres:17 - Creating container for image: postgres:17
+2026-01-20 15:46:36 INFO  tc.postgres:17 - Container postgres:17 is starting: bdec5903a281ddb7ff670b8ee4fd16d83a55e79e95549033640453350406e550
+2026-01-20 15:46:38 INFO  tc.postgres:17 - Container postgres:17 started in PT1.9551917S
+2026-01-20 15:46:38 INFO  tc.postgres:17 - Container is started (JDBC URL: jdbc:postgresql://localhost:65037/testdb?loggerLevel=OFF)
+2026-01-20 15:46:38 INFO  org.eclipse.jetty.server.Server - jetty-12.0.30; built: 2025-11-10T16:56:42.086Z; git: fba5b7ab607dbabc8ec742e99fba3d460ef465c4; jvm 21.0.2+13-58
+2026-01-20 15:46:38 INFO  o.e.j.server.handler.ContextHandler - Started oeje10s.ServletContextHandler@37e9481c{/__admin,/__admin,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@3e839a9f{STARTED}}
+2026-01-20 15:46:38 WARN  o.e.jetty.util.DeprecationWarning - Using @Deprecated Class org.eclipse.jetty.ee10.servlets.CrossOriginFilter
+2026-01-20 15:46:38 INFO  o.e.j.e.s.ServletContextHandler - Started oeje10s.ServletContextHandler@37e9481c{/__admin,/__admin,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@3e839a9f{STARTED}}
+2026-01-20 15:46:38 INFO  o.e.j.server.handler.ContextHandler - Started oeje10s.ServletContextHandler@8cb18{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@2216efc6{STARTED}}
+2026-01-20 15:46:38 INFO  o.e.j.s.handler.ContextHandler.ROOT - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+2026-01-20 15:46:38 INFO  o.e.j.e.s.ServletContextHandler - Started oeje10s.ServletContextHandler@8cb18{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@2216efc6{STARTED}}
+2026-01-20 15:46:38 INFO  o.e.jetty.server.AbstractConnector - Started NetworkTrafficServerConnector@789df8e9{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:65038}
+2026-01-20 15:46:38 INFO  org.eclipse.jetty.server.Server - Started oejs.Server@2278b9a3{STARTING}[12.0.30,sto=1000] @16043ms
+2026-01-20 15:46:38 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.dgika.api.controller.SaveITTest]: SaveITTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-20 15:46:38 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.dgika.TickerApiApp for test class org.dgika.api.controller.SaveITTest
+2026-01-20 15:46:38 INFO  org.dgika.api.controller.SaveITTest - Starting SaveITTest using Java 21.0.2 with PID 16284 (started by rexar.ika in D:\JAVA\MyJava\javarush\tickerAPI)
+2026-01-20 15:46:38 INFO  org.dgika.api.controller.SaveITTest - The following 1 profile is active: "test"
+2026-01-20 15:46:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20 15:46:38 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2026-01-20 15:46:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-20 15:46:39 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@565fc860
+2026-01-20 15:46:39 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-20 15:46:39 INFO  liquibase.database - Set default schema name to public
+2026-01-20 15:46:39 INFO  liquibase.changelog - Creating database changelog table with name: public.databasechangelog
+2026-01-20 15:46:39 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:46:39 INFO  liquibase.snapshot - Creating snapshot
+2026-01-20 15:46:39 INFO  liquibase.lockservice - Successfully acquired change log lock
+2026-01-20 15:46:39 INFO  liquibase.command - Using deploymentId: 8913189538
+2026-01-20 15:46:39 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:46:39 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika
+2026-01-20 15:46:39 INFO  liquibase.changelog - Custom SQL executed
+2026-01-20 15:46:39 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika ran successfully in 6ms
+2026-01-20 15:46:39 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-2-create-users::dgika
+2026-01-20 15:46:39 INFO  liquibase.changelog - Table users created
+2026-01-20 15:46:39 INFO  liquibase.changelog - Unique constraint added to users(email)
+2026-01-20 15:46:39 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-2-create-users::dgika ran successfully in 6ms
+2026-01-20 15:46:39 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you
+2026-01-20 15:46:39 INFO  liquibase.changelog - Table tickers created
+2026-01-20 15:46:39 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you ran successfully in 4ms
+2026-01-20 15:46:39 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-prices-table::you
+2026-01-20 15:46:39 INFO  liquibase.changelog - Table prices created
+2026-01-20 15:46:39 INFO  liquibase.changelog - Unique constraint added to prices(ticker_id, date)
+2026-01-20 15:46:39 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-prices-table::you ran successfully in 5ms
+2026-01-20 15:46:39 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you
+2026-01-20 15:46:39 INFO  liquibase.changelog - Table user_prices created
+2026-01-20 15:46:39 INFO  liquibase.changelog - Primary key added to user_prices (user_id, price_id)
+2026-01-20 15:46:39 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you ran successfully in 5ms
+2026-01-20 15:46:39 INFO  liquibase.util - UPDATE SUMMARY
+2026-01-20 15:46:39 INFO  liquibase.util - Run:                          5
+2026-01-20 15:46:39 INFO  liquibase.util - Previously run:               0
+2026-01-20 15:46:39 INFO  liquibase.util - Filtered out:                 0
+2026-01-20 15:46:39 INFO  liquibase.util - -------------------------------
+2026-01-20 15:46:39 INFO  liquibase.util - Total change sets:            5
+2026-01-20 15:46:39 INFO  liquibase.util - Update summary generated
+2026-01-20 15:46:39 INFO  liquibase.command - Update command completed successfully.
+2026-01-20 15:46:39 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 0
+2026-01-20 15:46:39 INFO  liquibase.lockservice - Successfully released change log lock
+2026-01-20 15:46:39 INFO  liquibase.command - Command execution complete
+2026-01-20 15:46:39 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20 15:46:39 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-20 15:46:39 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20 15:46:39 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20 15:46:39 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20 15:46:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:46:39 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-01-20 15:46:39 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20 15:46:39 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-20 15:46:39 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-20 15:46:39 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-01-20 15:46:39 INFO  org.dgika.api.controller.SaveITTest - Started SaveITTest in 0.714 seconds (process running for 16.765)
+2026-01-20 15:46:39 INFO  o.d.s.service.AuthenticationService - event=auth_register userId=3c2d72f5-36e9-4f69-9264-54500bd49980 email=testTI@mail.com
+2026-01-20 15:46:39 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=201 durationMs=66
+2026-01-20 15:46:39 INFO  o.d.s.service.AuthenticationService - event=auth_login userId=3c2d72f5-36e9-4f69-9264-54500bd49980 email=testTI@mail.com
+2026-01-20 15:46:39 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/login status=200 durationMs=114
+2026-01-20 15:46:39 INFO  org.dgika.service.TickerService - event=prices_import_start userId=3c2d72f5-36e9-4f69-9264-54500bd49980 ticker=AAPL start=2025-01-01 end=2025-02-03
+2026-01-20 15:46:39 INFO  org.dgika.service.TickerService - event=prices_import_done userId=3c2d72f5-36e9-4f69-9264-54500bd49980 ticker=AAPL saved=2 durationMs=264
+2026-01-20 15:46:39 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/save status=201 durationMs=294
+2026-01-20 15:46:39 WARN  o.d.a.e.GlobalExceptionHandler - event=api_error status=400 type=validation errorsCount=1
+2026-01-20 15:46:39 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/save status=400 durationMs=23
+2026-01-20 15:46:39 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/save status=401 durationMs=1
+2026-01-20 15:46:39 INFO  org.dgika.service.PriceService - event=user_saved_prices userId=3c2d72f5-36e9-4f69-9264-54500bd49980 ticker=AAPL count=2 durationMs=4
+2026-01-20 15:46:39 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=GET path=/api/user/saved status=200 durationMs=15
+2026-01-20 15:46:40 INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@2278b9a3{STOPPING}[12.0.30,sto=1000]
+2026-01-20 15:46:40 INFO  org.eclipse.jetty.server.Server - Shutdown oejs.Server@2278b9a3{STOPPING}[12.0.30,sto=1000]
+2026-01-20 15:46:40 INFO  o.e.jetty.server.AbstractConnector - Stopped NetworkTrafficServerConnector@789df8e9{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:0}
+2026-01-20 15:46:40 INFO  o.e.j.e.s.ServletContextHandler - Stopped oeje10s.ServletContextHandler@8cb18{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@2216efc6{STOPPED}}
+2026-01-20 15:46:40 INFO  o.e.j.e.s.ServletContextHandler - Stopped oeje10s.ServletContextHandler@37e9481c{/__admin,/__admin,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@3e839a9f{STOPPED}}
+2026-01-20 15:46:40 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.dgika.api.controller.UserControllerITTest]: UserControllerITTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-20 15:46:40 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.dgika.TickerApiApp for test class org.dgika.api.controller.UserControllerITTest
+2026-01-20 15:46:40 INFO  tc.postgres:17 - Creating container for image: postgres:17
+2026-01-20 15:46:40 INFO  tc.postgres:17 - Container postgres:17 is starting: 7f5510eaf5b59242111383628b60b21a281fb8c592c80ecfa5baf4385b2e8a77
+2026-01-20 15:46:42 INFO  tc.postgres:17 - Container postgres:17 started in PT1.9473941S
+2026-01-20 15:46:42 INFO  tc.postgres:17 - Container is started (JDBC URL: jdbc:postgresql://localhost:65046/testdb?loggerLevel=OFF)
+2026-01-20 15:46:42 INFO  o.d.a.c.UserControllerITTest - Starting UserControllerITTest using Java 21.0.2 with PID 16284 (started by rexar.ika in D:\JAVA\MyJava\javarush\tickerAPI)
+2026-01-20 15:46:42 INFO  o.d.a.c.UserControllerITTest - The following 1 profile is active: "test"
+2026-01-20 15:46:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20 15:46:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2026-01-20 15:46:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-01-20 15:46:42 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@10fbc406
+2026-01-20 15:46:42 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-01-20 15:46:42 INFO  liquibase.database - Set default schema name to public
+2026-01-20 15:46:42 INFO  liquibase.changelog - Creating database changelog table with name: public.databasechangelog
+2026-01-20 15:46:42 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:46:42 INFO  liquibase.snapshot - Creating snapshot
+2026-01-20 15:46:42 INFO  liquibase.lockservice - Successfully acquired change log lock
+2026-01-20 15:46:42 INFO  liquibase.command - Using deploymentId: 8913189538
+2026-01-20 15:46:42 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:46:42 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika
+2026-01-20 15:46:42 INFO  liquibase.changelog - Custom SQL executed
+2026-01-20 15:46:42 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika ran successfully in 5ms
+2026-01-20 15:46:42 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-2-create-users::dgika
+2026-01-20 15:46:42 INFO  liquibase.changelog - Table users created
+2026-01-20 15:46:42 INFO  liquibase.changelog - Unique constraint added to users(email)
+2026-01-20 15:46:42 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-2-create-users::dgika ran successfully in 6ms
+2026-01-20 15:46:42 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you
+2026-01-20 15:46:42 INFO  liquibase.changelog - Table tickers created
+2026-01-20 15:46:42 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you ran successfully in 4ms
+2026-01-20 15:46:42 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-prices-table::you
+2026-01-20 15:46:42 INFO  liquibase.changelog - Table prices created
+2026-01-20 15:46:42 INFO  liquibase.changelog - Unique constraint added to prices(ticker_id, date)
+2026-01-20 15:46:42 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-prices-table::you ran successfully in 6ms
+2026-01-20 15:46:42 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you
+2026-01-20 15:46:42 INFO  liquibase.changelog - Table user_prices created
+2026-01-20 15:46:42 INFO  liquibase.changelog - Primary key added to user_prices (user_id, price_id)
+2026-01-20 15:46:42 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you ran successfully in 5ms
+2026-01-20 15:46:42 INFO  liquibase.util - UPDATE SUMMARY
+2026-01-20 15:46:42 INFO  liquibase.util - Run:                          5
+2026-01-20 15:46:42 INFO  liquibase.util - Previously run:               0
+2026-01-20 15:46:42 INFO  liquibase.util - Filtered out:                 0
+2026-01-20 15:46:42 INFO  liquibase.util - -------------------------------
+2026-01-20 15:46:42 INFO  liquibase.util - Total change sets:            5
+2026-01-20 15:46:42 INFO  liquibase.util - Update summary generated
+2026-01-20 15:46:42 INFO  liquibase.command - Update command completed successfully.
+2026-01-20 15:46:42 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 0
+2026-01-20 15:46:42 INFO  liquibase.lockservice - Successfully released change log lock
+2026-01-20 15:46:42 INFO  liquibase.command - Command execution complete
+2026-01-20 15:46:42 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20 15:46:42 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-20 15:46:42 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20 15:46:42 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20 15:46:42 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20 15:46:42 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:46:42 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-01-20 15:46:42 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20 15:46:43 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-20 15:46:43 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-20 15:46:43 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-01-20 15:46:43 INFO  o.d.a.c.UserControllerITTest - Started UserControllerITTest in 0.659 seconds (process running for 20.351)
+2026-01-20 15:46:43 INFO  o.d.s.service.AuthenticationService - event=auth_register userId=8fa1b4a5-3669-41f4-88f6-2a04aac913e5 email=testTI@mail.com
+2026-01-20 15:46:43 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=201 durationMs=66
+2026-01-20 15:46:43 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=400 durationMs=8
+2026-01-20 15:46:43 WARN  o.d.a.e.GlobalExceptionHandler - event=api_error status=400 type=validation errorsCount=2
+2026-01-20 15:46:43 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=400 durationMs=4
+2026-01-20 15:46:43 INFO  o.d.s.service.AuthenticationService - event=auth_login userId=8fa1b4a5-3669-41f4-88f6-2a04aac913e5 email=testTI@mail.com
+2026-01-20 15:46:43 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/login status=200 durationMs=112
+2026-01-20 15:46:43 WARN  o.d.a.e.GlobalExceptionHandler - event=api_error status=400 type=validation errorsCount=3
+2026-01-20 15:46:43 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=400 durationMs=2
+2026-01-20 15:46:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:46:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-20 15:46:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-20 15:46:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:46:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-20 15:46:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-01-20 15:46:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:46:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-01-20 15:46:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-01-20 15:51:41 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-20 15:51:41 INFO  o.dgika.api.controller.SavedITTest - Starting SavedITTest using Java 21.0.2 with PID 26680 (started by rexar.ika in D:\JAVA\MyJava\javarush\tickerAPI)
+2026-01-20 15:51:41 INFO  o.dgika.api.controller.SavedITTest - The following 1 profile is active: "test"
+2026-01-20 15:51:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20 15:51:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2026-01-20 15:51:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-20 15:51:43 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3afaf322
+2026-01-20 15:51:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-20 15:51:43 INFO  liquibase.database - Set default schema name to public
+2026-01-20 15:51:43 INFO  liquibase.changelog - Creating database changelog table with name: public.databasechangelog
+2026-01-20 15:51:43 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:51:43 INFO  liquibase.snapshot - Creating snapshot
+2026-01-20 15:51:44 INFO  liquibase.lockservice - Successfully acquired change log lock
+2026-01-20 15:51:44 INFO  liquibase.command - Using deploymentId: 8913503166
+2026-01-20 15:51:44 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:51:44 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika
+2026-01-20 15:51:44 INFO  liquibase.changelog - Custom SQL executed
+2026-01-20 15:51:44 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika ran successfully in 19ms
+2026-01-20 15:51:44 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-2-create-users::dgika
+2026-01-20 15:51:44 INFO  liquibase.changelog - Table users created
+2026-01-20 15:51:44 INFO  liquibase.changelog - Unique constraint added to users(email)
+2026-01-20 15:51:44 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-2-create-users::dgika ran successfully in 7ms
+2026-01-20 15:51:44 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you
+2026-01-20 15:51:44 INFO  liquibase.changelog - Table tickers created
+2026-01-20 15:51:44 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you ran successfully in 3ms
+2026-01-20 15:51:44 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-prices-table::you
+2026-01-20 15:51:44 INFO  liquibase.changelog - Table prices created
+2026-01-20 15:51:44 INFO  liquibase.changelog - Unique constraint added to prices(ticker_id, date)
+2026-01-20 15:51:44 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-prices-table::you ran successfully in 6ms
+2026-01-20 15:51:44 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you
+2026-01-20 15:51:44 INFO  liquibase.changelog - Table user_prices created
+2026-01-20 15:51:44 INFO  liquibase.changelog - Primary key added to user_prices (user_id, price_id)
+2026-01-20 15:51:44 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you ran successfully in 8ms
+2026-01-20 15:51:44 INFO  liquibase.util - UPDATE SUMMARY
+2026-01-20 15:51:44 INFO  liquibase.util - Run:                          5
+2026-01-20 15:51:44 INFO  liquibase.util - Previously run:               0
+2026-01-20 15:51:44 INFO  liquibase.util - Filtered out:                 0
+2026-01-20 15:51:44 INFO  liquibase.util - -------------------------------
+2026-01-20 15:51:44 INFO  liquibase.util - Total change sets:            5
+2026-01-20 15:51:44 INFO  liquibase.util - Update summary generated
+2026-01-20 15:51:44 INFO  liquibase.command - Update command completed successfully.
+2026-01-20 15:51:44 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 0
+2026-01-20 15:51:44 INFO  liquibase.lockservice - Successfully released change log lock
+2026-01-20 15:51:44 INFO  liquibase.command - Command execution complete
+2026-01-20 15:51:44 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20 15:51:44 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.36.Final
+2026-01-20 15:51:44 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-20 15:51:45 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20 15:51:45 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20 15:51:46 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20 15:51:46 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:51:46 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-01-20 15:51:46 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-20 15:51:47 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20 15:51:48 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-20 15:51:48 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-20 15:51:48 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-01-20 15:51:48 INFO  o.dgika.api.controller.SavedITTest - Started SavedITTest in 7.41 seconds (process running for 12.422)
+2026-01-20 15:51:48 INFO  o.d.s.service.AuthenticationService - event=auth_register userId=8ce56d44-b2ff-429f-9f0b-3ef097bb9150 email=testTI@mail.com
+2026-01-20 15:51:48 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=201 durationMs=435
+2026-01-20 15:51:49 INFO  o.d.s.service.AuthenticationService - event=auth_login userId=8ce56d44-b2ff-429f-9f0b-3ef097bb9150 email=testTI@mail.com
+2026-01-20 15:51:49 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/login status=200 durationMs=143
+2026-01-20 15:51:49 INFO  org.dgika.service.PriceService - event=user_saved_prices userId=8ce56d44-b2ff-429f-9f0b-3ef097bb9150 ticker=AAPL count=2 durationMs=12
+2026-01-20 15:51:49 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=GET path=/api/user/saved status=200 durationMs=69
+2026-01-20 15:51:49 WARN  org.dgika.service.PriceService - event=user_saved_prices_failed userId=8ce56d44-b2ff-429f-9f0b-3ef097bb9150 ticker= reason=unknown_ticker
+2026-01-20 15:51:49 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=GET path=/api/user/saved status=400 durationMs=17
+2026-01-20 15:51:50 INFO  tc.postgres:17 - Creating container for image: postgres:17
+2026-01-20 15:51:50 INFO  tc.postgres:17 - Container postgres:17 is starting: 425e77aee69a7b0548f5cb9ef8f5741e867e27f5e68445131a20a3a9b45d9516
+2026-01-20 15:51:52 INFO  tc.postgres:17 - Container postgres:17 started in PT1.9330616S
+2026-01-20 15:51:52 INFO  tc.postgres:17 - Container is started (JDBC URL: jdbc:postgresql://localhost:49856/testdb?loggerLevel=OFF)
+2026-01-20 15:51:52 INFO  org.eclipse.jetty.server.Server - jetty-12.0.30; built: 2025-11-10T16:56:42.086Z; git: fba5b7ab607dbabc8ec742e99fba3d460ef465c4; jvm 21.0.2+13-58
+2026-01-20 15:51:52 INFO  o.e.j.server.handler.ContextHandler - Started oeje10s.ServletContextHandler@746063f4{/__admin,/__admin,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@76d336c0{STARTED}}
+2026-01-20 15:51:52 WARN  o.e.jetty.util.DeprecationWarning - Using @Deprecated Class org.eclipse.jetty.ee10.servlets.CrossOriginFilter
+2026-01-20 15:51:52 INFO  o.e.j.e.s.ServletContextHandler - Started oeje10s.ServletContextHandler@746063f4{/__admin,/__admin,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@76d336c0{STARTED}}
+2026-01-20 15:51:52 INFO  o.e.j.server.handler.ContextHandler - Started oeje10s.ServletContextHandler@652977cd{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@5c8409c5{STARTED}}
+2026-01-20 15:51:52 INFO  o.e.j.s.handler.ContextHandler.ROOT - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normalized mapped under returned 'null'
+2026-01-20 15:51:52 INFO  o.e.j.e.s.ServletContextHandler - Started oeje10s.ServletContextHandler@652977cd{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@5c8409c5{STARTED}}
+2026-01-20 15:51:52 INFO  o.e.jetty.server.AbstractConnector - Started NetworkTrafficServerConnector@5d6eaf1a{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:49857}
+2026-01-20 15:51:52 INFO  org.eclipse.jetty.server.Server - Started oejs.Server@22cc5fc8{STARTING}[12.0.30,sto=1000] @16339ms
+2026-01-20 15:51:52 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.dgika.api.controller.SaveITTest]: SaveITTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-20 15:51:52 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.dgika.TickerApiApp for test class org.dgika.api.controller.SaveITTest
+2026-01-20 15:51:52 INFO  org.dgika.api.controller.SaveITTest - Starting SaveITTest using Java 21.0.2 with PID 26680 (started by rexar.ika in D:\JAVA\MyJava\javarush\tickerAPI)
+2026-01-20 15:51:52 INFO  org.dgika.api.controller.SaveITTest - The following 1 profile is active: "test"
+2026-01-20 15:51:52 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20 15:51:52 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2026-01-20 15:51:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-20 15:51:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@75abc74
+2026-01-20 15:51:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-20 15:51:52 INFO  liquibase.database - Set default schema name to public
+2026-01-20 15:51:52 INFO  liquibase.changelog - Creating database changelog table with name: public.databasechangelog
+2026-01-20 15:51:52 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:51:52 INFO  liquibase.snapshot - Creating snapshot
+2026-01-20 15:51:52 INFO  liquibase.lockservice - Successfully acquired change log lock
+2026-01-20 15:51:52 INFO  liquibase.command - Using deploymentId: 8913503166
+2026-01-20 15:51:52 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:51:52 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika
+2026-01-20 15:51:52 INFO  liquibase.changelog - Custom SQL executed
+2026-01-20 15:51:52 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika ran successfully in 7ms
+2026-01-20 15:51:52 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-2-create-users::dgika
+2026-01-20 15:51:52 INFO  liquibase.changelog - Table users created
+2026-01-20 15:51:52 INFO  liquibase.changelog - Unique constraint added to users(email)
+2026-01-20 15:51:52 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-2-create-users::dgika ran successfully in 7ms
+2026-01-20 15:51:52 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you
+2026-01-20 15:51:52 INFO  liquibase.changelog - Table tickers created
+2026-01-20 15:51:52 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you ran successfully in 4ms
+2026-01-20 15:51:52 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-prices-table::you
+2026-01-20 15:51:52 INFO  liquibase.changelog - Table prices created
+2026-01-20 15:51:52 INFO  liquibase.changelog - Unique constraint added to prices(ticker_id, date)
+2026-01-20 15:51:52 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-prices-table::you ran successfully in 7ms
+2026-01-20 15:51:52 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you
+2026-01-20 15:51:52 INFO  liquibase.changelog - Table user_prices created
+2026-01-20 15:51:52 INFO  liquibase.changelog - Primary key added to user_prices (user_id, price_id)
+2026-01-20 15:51:52 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you ran successfully in 5ms
+2026-01-20 15:51:52 INFO  liquibase.util - UPDATE SUMMARY
+2026-01-20 15:51:52 INFO  liquibase.util - Run:                          5
+2026-01-20 15:51:52 INFO  liquibase.util - Previously run:               0
+2026-01-20 15:51:52 INFO  liquibase.util - Filtered out:                 0
+2026-01-20 15:51:52 INFO  liquibase.util - -------------------------------
+2026-01-20 15:51:52 INFO  liquibase.util - Total change sets:            5
+2026-01-20 15:51:52 INFO  liquibase.util - Update summary generated
+2026-01-20 15:51:52 INFO  liquibase.command - Update command completed successfully.
+2026-01-20 15:51:52 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 0
+2026-01-20 15:51:52 INFO  liquibase.lockservice - Successfully released change log lock
+2026-01-20 15:51:52 INFO  liquibase.command - Command execution complete
+2026-01-20 15:51:52 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20 15:51:52 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-20 15:51:52 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20 15:51:52 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20 15:51:52 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20 15:51:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:51:52 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-01-20 15:51:53 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20 15:51:53 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-20 15:51:53 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-20 15:51:53 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-01-20 15:51:53 INFO  org.dgika.api.controller.SaveITTest - Started SaveITTest in 0.759 seconds (process running for 17.106)
+2026-01-20 15:51:53 INFO  o.d.s.service.AuthenticationService - event=auth_register userId=db8622d0-8a85-45ba-bc6f-99875caea393 email=testTI@mail.com
+2026-01-20 15:51:53 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=201 durationMs=68
+2026-01-20 15:51:53 INFO  o.d.s.service.AuthenticationService - event=auth_login userId=db8622d0-8a85-45ba-bc6f-99875caea393 email=testTI@mail.com
+2026-01-20 15:51:53 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/login status=200 durationMs=111
+2026-01-20 15:51:53 INFO  org.dgika.service.TickerService - event=prices_import_start userId=db8622d0-8a85-45ba-bc6f-99875caea393 ticker=AAPL start=2025-01-01 end=2025-02-03
+2026-01-20 15:51:53 INFO  org.dgika.service.TickerService - event=prices_import_done userId=db8622d0-8a85-45ba-bc6f-99875caea393 ticker=AAPL saved=2 durationMs=256
+2026-01-20 15:51:53 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/save status=201 durationMs=284
+2026-01-20 15:51:53 WARN  o.d.a.e.GlobalExceptionHandler - event=api_error status=400 type=validation errorsCount=1
+2026-01-20 15:51:53 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/save status=400 durationMs=23
+2026-01-20 15:51:53 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/save status=401 durationMs=1
+2026-01-20 15:51:53 INFO  org.dgika.service.PriceService - event=user_saved_prices userId=db8622d0-8a85-45ba-bc6f-99875caea393 ticker=AAPL count=2 durationMs=5
+2026-01-20 15:51:53 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=GET path=/api/user/saved status=200 durationMs=15
+2026-01-20 15:51:53 INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@22cc5fc8{STOPPING}[12.0.30,sto=1000]
+2026-01-20 15:51:53 INFO  org.eclipse.jetty.server.Server - Shutdown oejs.Server@22cc5fc8{STOPPING}[12.0.30,sto=1000]
+2026-01-20 15:51:53 INFO  o.e.jetty.server.AbstractConnector - Stopped NetworkTrafficServerConnector@5d6eaf1a{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:0}
+2026-01-20 15:51:53 INFO  o.e.j.e.s.ServletContextHandler - Stopped oeje10s.ServletContextHandler@652977cd{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@5c8409c5{STOPPED}}
+2026-01-20 15:51:53 INFO  o.e.j.e.s.ServletContextHandler - Stopped oeje10s.ServletContextHandler@746063f4{/__admin,/__admin,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@76d336c0{STOPPED}}
+2026-01-20 15:51:54 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [org.dgika.api.controller.UserControllerITTest]: UserControllerITTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-20 15:51:54 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration org.dgika.TickerApiApp for test class org.dgika.api.controller.UserControllerITTest
+2026-01-20 15:51:54 INFO  tc.postgres:17 - Creating container for image: postgres:17
+2026-01-20 15:51:54 INFO  tc.postgres:17 - Container postgres:17 is starting: 76df6c239c84cd565f04ac5dc11a428eeabb43bdc33d5a93af63140d948ee4cb
+2026-01-20 15:51:56 INFO  tc.postgres:17 - Container postgres:17 started in PT1.9690967S
+2026-01-20 15:51:56 INFO  tc.postgres:17 - Container is started (JDBC URL: jdbc:postgresql://localhost:49865/testdb?loggerLevel=OFF)
+2026-01-20 15:51:56 INFO  o.d.a.c.UserControllerITTest - Starting UserControllerITTest using Java 21.0.2 with PID 26680 (started by rexar.ika in D:\JAVA\MyJava\javarush\tickerAPI)
+2026-01-20 15:51:56 INFO  o.d.a.c.UserControllerITTest - The following 1 profile is active: "test"
+2026-01-20 15:51:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20 15:51:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 3 JPA repository interfaces.
+2026-01-20 15:51:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-01-20 15:51:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@4f397042
+2026-01-20 15:51:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-01-20 15:51:56 INFO  liquibase.database - Set default schema name to public
+2026-01-20 15:51:56 INFO  liquibase.changelog - Creating database changelog table with name: public.databasechangelog
+2026-01-20 15:51:56 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:51:56 INFO  liquibase.snapshot - Creating snapshot
+2026-01-20 15:51:56 INFO  liquibase.lockservice - Successfully acquired change log lock
+2026-01-20 15:51:56 INFO  liquibase.command - Using deploymentId: 8913503166
+2026-01-20 15:51:56 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 15:51:56 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika
+2026-01-20 15:51:56 INFO  liquibase.changelog - Custom SQL executed
+2026-01-20 15:51:56 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika ran successfully in 6ms
+2026-01-20 15:51:56 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-2-create-users::dgika
+2026-01-20 15:51:56 INFO  liquibase.changelog - Table users created
+2026-01-20 15:51:56 INFO  liquibase.changelog - Unique constraint added to users(email)
+2026-01-20 15:51:56 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-2-create-users::dgika ran successfully in 5ms
+2026-01-20 15:51:56 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you
+2026-01-20 15:51:56 INFO  liquibase.changelog - Table tickers created
+2026-01-20 15:51:56 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you ran successfully in 4ms
+2026-01-20 15:51:56 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-prices-table::you
+2026-01-20 15:51:56 INFO  liquibase.changelog - Table prices created
+2026-01-20 15:51:56 INFO  liquibase.changelog - Unique constraint added to prices(ticker_id, date)
+2026-01-20 15:51:56 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-prices-table::you ran successfully in 5ms
+2026-01-20 15:51:56 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you
+2026-01-20 15:51:56 INFO  liquibase.changelog - Table user_prices created
+2026-01-20 15:51:56 INFO  liquibase.changelog - Primary key added to user_prices (user_id, price_id)
+2026-01-20 15:51:56 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you ran successfully in 4ms
+2026-01-20 15:51:56 INFO  liquibase.util - UPDATE SUMMARY
+2026-01-20 15:51:56 INFO  liquibase.util - Run:                          5
+2026-01-20 15:51:56 INFO  liquibase.util - Previously run:               0
+2026-01-20 15:51:56 INFO  liquibase.util - Filtered out:                 0
+2026-01-20 15:51:56 INFO  liquibase.util - -------------------------------
+2026-01-20 15:51:56 INFO  liquibase.util - Total change sets:            5
+2026-01-20 15:51:56 INFO  liquibase.util - Update summary generated
+2026-01-20 15:51:56 INFO  liquibase.command - Update command completed successfully.
+2026-01-20 15:51:56 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 0
+2026-01-20 15:51:56 INFO  liquibase.lockservice - Successfully released change log lock
+2026-01-20 15:51:56 INFO  liquibase.command - Command execution complete
+2026-01-20 15:51:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20 15:51:56 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-20 15:51:56 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20 15:51:56 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20 15:51:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20 15:51:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:51:56 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-01-20 15:51:56 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20 15:51:56 INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-20 15:51:56 INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-20 15:51:56 INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-01-20 15:51:56 INFO  o.d.a.c.UserControllerITTest - Started UserControllerITTest in 0.634 seconds (process running for 20.682)
+2026-01-20 15:51:56 INFO  o.d.s.service.AuthenticationService - event=auth_register userId=c2b7f493-fef6-40c4-815b-6c19451c17e2 email=testTI@mail.com
+2026-01-20 15:51:56 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=201 durationMs=65
+2026-01-20 15:51:56 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=400 durationMs=8
+2026-01-20 15:51:56 WARN  o.d.a.e.GlobalExceptionHandler - event=api_error status=400 type=validation errorsCount=2
+2026-01-20 15:51:56 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=400 durationMs=4
+2026-01-20 15:51:56 INFO  o.d.s.service.AuthenticationService - event=auth_login userId=c2b7f493-fef6-40c4-815b-6c19451c17e2 email=testTI@mail.com
+2026-01-20 15:51:56 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/login status=200 durationMs=113
+2026-01-20 15:51:56 WARN  o.d.a.e.GlobalExceptionHandler - event=api_error status=400 type=validation errorsCount=3
+2026-01-20 15:51:56 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=400 durationMs=2
+2026-01-20 15:51:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:51:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-20 15:51:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-20 15:51:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:51:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-20 15:51:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-01-20 15:51:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 15:51:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2026-01-20 15:51:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2026-01-20 12:54:01 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-20 12:54:01 INFO  org.dgika.TickerApiApp - Starting TickerApiApp v1.0-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+2026-01-20 12:54:01 INFO  org.dgika.TickerApiApp - No active profile set, falling back to 1 default profile: "default"
+2026-01-20 12:54:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20 12:54:01 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2026-01-20 12:54:02 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-20 12:54:02 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-20 12:54:02 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-20 12:54:02 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-01-20 12:54:02 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-20 12:54:02 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1152 ms
+2026-01-20 12:54:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-20 12:54:02 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ae3235e
+2026-01-20 12:54:02 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-20 12:54:02 INFO  liquibase.database - Set default schema name to public
+2026-01-20 12:54:03 INFO  liquibase.changelog - Creating database changelog table with name: public.databasechangelog
+2026-01-20 12:54:03 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 12:54:03 INFO  liquibase.snapshot - Creating snapshot
+2026-01-20 12:54:03 INFO  liquibase.lockservice - Successfully acquired change log lock
+2026-01-20 12:54:03 INFO  liquibase.command - Using deploymentId: 8913642543
+2026-01-20 12:54:03 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 12:54:03 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika
+2026-01-20 12:54:03 INFO  liquibase.changelog - Custom SQL executed
+2026-01-20 12:54:03 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-1-enable-pgcrypto::dgika ran successfully in 21ms
+2026-01-20 12:54:03 INFO  liquibase.ui - Running Changeset: db/migration/001-create-users.yml::001-2-create-users::dgika
+2026-01-20 12:54:03 INFO  liquibase.changelog - Table users created
+2026-01-20 12:54:03 INFO  liquibase.changelog - Unique constraint added to users(email)
+2026-01-20 12:54:03 INFO  liquibase.changelog - ChangeSet db/migration/001-create-users.yml::001-2-create-users::dgika ran successfully in 9ms
+2026-01-20 12:54:03 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you
+2026-01-20 12:54:03 INFO  liquibase.changelog - Table tickers created
+2026-01-20 12:54:03 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-tickers-table::you ran successfully in 5ms
+2026-01-20 12:54:03 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-prices-table::you
+2026-01-20 12:54:03 INFO  liquibase.changelog - Table prices created
+2026-01-20 12:54:03 INFO  liquibase.changelog - Unique constraint added to prices(ticker_id, date)
+2026-01-20 12:54:03 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-prices-table::you ran successfully in 9ms
+2026-01-20 12:54:03 INFO  liquibase.ui - Running Changeset: db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you
+2026-01-20 12:54:03 INFO  liquibase.changelog - Table user_prices created
+2026-01-20 12:54:03 INFO  liquibase.changelog - Primary key added to user_prices (user_id, price_id)
+2026-01-20 12:54:03 INFO  liquibase.changelog - ChangeSet db/migration/002-create-tickers-and-prices.yml::create-user-prices-table::you ran successfully in 11ms
+2026-01-20 12:54:03 INFO  liquibase.util - UPDATE SUMMARY
+2026-01-20 12:54:03 INFO  liquibase.util - Run:                          5
+2026-01-20 12:54:03 INFO  liquibase.util - Previously run:               0
+2026-01-20 12:54:03 INFO  liquibase.util - Filtered out:                 0
+2026-01-20 12:54:03 INFO  liquibase.util - -------------------------------
+2026-01-20 12:54:03 INFO  liquibase.util - Total change sets:            5
+2026-01-20 12:54:03 INFO  liquibase.util - Update summary generated
+2026-01-20 12:54:03 INFO  liquibase.command - Update command completed successfully.
+2026-01-20 12:54:03 INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 0
+2026-01-20 12:54:03 INFO  liquibase.lockservice - Successfully released change log lock
+2026-01-20 12:54:03 INFO  liquibase.command - Command execution complete
+2026-01-20 12:54:04 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20 12:54:04 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.36.Final
+2026-01-20 12:54:04 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-20 12:54:04 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20 12:54:04 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20 12:54:05 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20 12:54:05 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 12:54:05 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-01-20 12:54:05 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-20 12:54:06 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20 12:54:06 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-20 12:54:06 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-20 12:54:06 INFO  org.dgika.TickerApiApp - Started TickerApiApp in 5.737 seconds (process running for 6.131)
+2026-01-20 13:00:07 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-20 13:00:07 INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-01-20 13:00:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 13:00:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-20 13:00:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-20 13:00:51 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-01-20 13:00:51 INFO  org.dgika.TickerApiApp - Starting TickerApiApp v1.0-SNAPSHOT using Java 21.0.9 with PID 1 (/app/app.jar started by root in /app)
+2026-01-20 13:00:51 INFO  org.dgika.TickerApiApp - No active profile set, falling back to 1 default profile: "default"
+2026-01-20 13:00:52 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20 13:00:52 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2026-01-20 13:00:53 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-01-20 13:00:53 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-01-20 13:00:53 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-01-20 13:00:53 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-01-20 13:00:53 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-01-20 13:00:53 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1260 ms
+2026-01-20 13:00:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-20 13:00:53 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32dcfeea
+2026-01-20 13:00:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-20 13:00:53 INFO  liquibase.database - Set default schema name to public
+2026-01-20 13:00:54 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 13:00:54 INFO  liquibase.ui - Database is up to date, no changesets to execute
+2026-01-20 13:00:54 INFO  liquibase.changelog - Reading from public.databasechangelog
+2026-01-20 13:00:54 INFO  liquibase.util - UPDATE SUMMARY
+2026-01-20 13:00:54 INFO  liquibase.util - Run:                          0
+2026-01-20 13:00:54 INFO  liquibase.util - Previously run:               5
+2026-01-20 13:00:54 INFO  liquibase.util - Filtered out:                 0
+2026-01-20 13:00:54 INFO  liquibase.util - -------------------------------
+2026-01-20 13:00:54 INFO  liquibase.util - Total change sets:            5
+2026-01-20 13:00:54 INFO  liquibase.util - Update summary generated
+2026-01-20 13:00:54 INFO  liquibase.command - Command execution complete
+2026-01-20 13:00:54 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20 13:00:55 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.36.Final
+2026-01-20 13:00:55 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-01-20 13:00:55 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20 13:00:55 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.7
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-20 13:00:56 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20 13:00:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-20 13:00:56 INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-01-20 13:00:56 INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-20 13:00:56 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-20 13:00:57 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-01-20 13:00:57 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-01-20 13:00:57 INFO  org.dgika.TickerApiApp - Started TickerApiApp in 6.004 seconds (process running for 6.528)
+2026-01-20 13:01:46 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-20 13:01:46 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-01-20 13:01:46 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-01-20 13:01:47 INFO  o.d.s.service.AuthenticationService - event=auth_register userId=152fc32c-978f-40e1-806e-8d334e0747cd email=TestUserPostman_05@mail.ru
+2026-01-20 13:01:47 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/register status=201 durationMs=426
+2026-01-20 13:01:51 INFO  o.d.s.service.AuthenticationService - event=auth_login userId=152fc32c-978f-40e1-806e-8d334e0747cd email=TestUserPostman_05@mail.ru
+2026-01-20 13:01:51 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/login status=200 durationMs=146
+2026-01-20 13:02:02 INFO  org.dgika.service.TickerService - event=prices_import_start userId=152fc32c-978f-40e1-806e-8d334e0747cd ticker=MSFT start=2025-02-04 end=2025-02-15
+2026-01-20 13:02:03 INFO  org.dgika.service.TickerService - event=prices_import_done userId=152fc32c-978f-40e1-806e-8d334e0747cd ticker=MSFT saved=9 durationMs=709
+2026-01-20 13:02:03 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=POST path=/api/user/save status=201 durationMs=786
+2026-01-20 13:02:13 WARN  org.dgika.service.PriceService - event=user_saved_prices_failed userId=152fc32c-978f-40e1-806e-8d334e0747cd ticker=AAPL reason=unknown_ticker
+2026-01-20 13:02:13 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=GET path=/api/user/saved?ticker=aapl status=400 durationMs=22
+2026-01-20 13:02:30 INFO  org.dgika.service.PriceService - event=user_saved_prices userId=152fc32c-978f-40e1-806e-8d334e0747cd ticker=MSFT count=9 durationMs=10
+2026-01-20 13:02:30 INFO  o.d.web.filter.RequestLoggingFilter - event=http_request method=GET path=/api/user/saved?ticker=msft status=200 durationMs=20
