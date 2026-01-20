@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a15bb918-1f40-4ffc-8a68-b9a06d438b59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.2026-01-18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/app.2026-01-19.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/api/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/api/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/massive/MassiveClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/massive/MassiveClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/security/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/security/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/security/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/PriceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/PriceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dgika/service/TickerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dgika/service/TickerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/SaveITTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/SaveITTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/SavedITTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/SavedITTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/UserControllerITTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dgika/api/controller/UserControllerITTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +164,13 @@
       </method>
     </configuration>
     <configuration name="TickerApiApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="POLYGON_API_KEY" value="Usyt2spvOGxwGuDDHpwZsferqV3yKTpT" />
+        <env name="POSTGRES_DB" value="tickerapi" />
+        <env name="POSTGRES_PASSWORD" value="postgres" />
+        <env name="POSTGRES_USER" value="postgres" />
+        <env name="JWT_SIGNING_KEY" value="53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855" />
+      </envs>
       <module name="tickerAPI" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.dgika.TickerApiApp" />
       <extension name="coverage">
@@ -238,7 +248,8 @@
       <workItem from="1768637708962" duration="20243000" />
       <workItem from="1768727818876" duration="10186000" />
       <workItem from="1768768224837" duration="8000" />
-      <workItem from="1768808960301" duration="14594000" />
+      <workItem from="1768808960301" duration="23096000" />
+      <workItem from="1768891414731" duration="6952000" />
     </task>
     <servers />
   </component>

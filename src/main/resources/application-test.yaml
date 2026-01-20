@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/${POSTGRES_DB}
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/testdb
+    username: postgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 10
@@ -26,10 +26,10 @@ springdoc:
 
 token:
   signing:
-    key: ${JWT_SIGNING_KEY}
+    key: 53A73E5F1C4E0A2D3D635A75327855B5F2D784E6A1B423D6F247D1F6E5C3A596
   ttl-seconds: 3600
 
 massive:
   api:
     base-url: https://api.massive.com
-    key: ${POLYGON_API_KEY}
+    key: test-key
